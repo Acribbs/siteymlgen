@@ -1,0 +1,11 @@
+author:
+- Adam
+- Natalia
+date: 07/04/2019
+title: Reproducible Research in R
+category:
+- r
+- reprodicibility
+test:
+  adam: adam
+  natalia: natalia

@@ -1,0 +1,18 @@
+Package: siteymlgen
+Title: Automatically generate _site.yml file
+Version: 0.0.0.9000
+Authors@R: 
+    person(given = "Adam",
+           family = "Cribbs",
+           role = c("aut", "cre"),
+           email = "adam.cribbs@ndorms.ox.ac.uk",
+           comment = c(ORCID = "0000-0001-5288-3077"))
+Description: This package will automatically generate an _site.yml for generating Rmarkdown websites.
+License: MIT
+Encoding: UTF-8
+LazyData: true
+Imports:
+	data.table (>= 1.9.4),
+	dplyr
+	ymlthis
+RoxygenNote: 7.1.0
