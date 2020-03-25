@@ -13,6 +13,6 @@ Encoding: UTF-8
 LazyData: true
 Imports:
 	data.table (>= 1.9.4),
-	dplyr
+	dplyr,
 	ymlthis
 RoxygenNote: 7.1.0

@@ -1,20 +1,6 @@
-author:
-- name: Yihui Xie
-  affiliation: RStudio
-- name: Hadley Wickham
-  affiliation: RStudio
+author: Adam Cribbs
 date: 07/04/2019
 title: Reproducible Research in R
-category:
-- r
-- reprodicibility
-author:
-- name: Yihui Xie
-  affiliation: XXX
-- name: Hadley Wickham
-  affiliation: XXX
-date: XXX
-title: XXX
 category:
 - r
 - reprodicibility
