@@ -1,0 +1,10 @@
+---
+title: "Untitled"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+library(tidyverse)
+siteymlgen::init_siteymlgen()
+knitr::opts_chunk$set(echo = TRUE)
+```
