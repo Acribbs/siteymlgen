@@ -12,14 +12,14 @@ init_siteymlgen <- function(.yml=NULL, authors=NULL, date=NULL, affiliation=NULL
 
   features <- siteymlgen_features(authors=authors, date=date, affiliation=affiliation)
 
-  #parseenv <- siteymlgen_parsenav(dir)
+  parseenv <- siteymlgen_parsenav(dir)
 
   #output <- siteymlgen_output()
 
-  #yml_final <- c(features, parseenv, output)
+  yml_final <- c(features, parseenv)
 
 
-  yaml::write_yaml(features, file="_site.yml")
+  yaml::write_yaml(yml_final, file="_site.yml")
 
 
 }

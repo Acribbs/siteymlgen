@@ -8,37 +8,39 @@
 #' @param infile Path to the input file
 #' @return A matrix of the infile
 #' @export
-siteymlgen_parsenav <- function(.yml, dir="../BOTNAR_projects/proj003/tes/",
+siteymlgen_parsenav <- function(.yml, dir="test/",
                                 title=NULL, type=NULL, left=NULL, right =NULL, ...){
   infiles <- list.files(dir, pattern = c("md","Rmd"))
   n <- length(infiles)
   value = ""
+  # loop over infiles and then assign text and href based off the name of file
+  # Index as first navbar
+
+
+  home <- list(navbar_page("Home", href = "index.html"))
+
 
   for(infile in infiles){
 
-    n <- n - 1
+    infile.replace <- gsub(infile, pattern = "\\.\\S+$", replacement = "")
 
-    infile <- gsub(infile, pattern = "\\.\\S+$", replacement = "")
-    href_infile <- paste0(infile, ".html", sep="")
+    if (infile.replace == "index"){
+      next
+    }else{
+      ident <- str_extract(infile.replace, "[A-Z]+[1-9]+")
+      name <- str_extract(infile.replace, "\\S+")
+      print(name)
+      href_infile <- paste0(name, ".html", sep="")
 
-    navbar <- list(
-      text = infile,
-      href = href_infile,
-      left = left,
-      right = right,
-      ...
-    ) %>%
-      purrr::discard()
+      home <- rlist::list.append(home,navbar_page(name, href = href_infile))
 
-    value <- paste(value, now)
+    }
 
-  if(n > 0){
-      value <- paste(value, "%>%")
-  }else{
-    break
-  }
+
 }
 
-return(value)
-
+    ymlthis::yml_empty() %>%
+    yml_navbar(
+      title = "My Website",
+      left = home)
 }
