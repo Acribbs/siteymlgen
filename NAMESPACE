@@ -2,8 +2,5 @@
 
 export(init_siteymlgen)
 export(is_siteymlgen_blank)
-export(load_mat)
 export(siteymlgen_blank)
-export(siteymlgen_features)
-export(siteymlgen_output)
-export(siteymlgen_parsenav)
+importFrom(magrittr,"%>%")

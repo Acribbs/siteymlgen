@@ -6,6 +6,8 @@
 #' kepted.
 #'
 #' @param infile Path to the input file
+#' @inheritParams tidyr::separate
+#' @importFrom magrittr "%>%"
 #' @return A matrix of the infile
 #' @export
 init_siteymlgen <- function(.yml=NULL, authors=NULL, date=NULL, affiliation=NULL, dir=NULL){
@@ -23,7 +25,6 @@ init_siteymlgen <- function(.yml=NULL, authors=NULL, date=NULL, affiliation=NULL
 
 
 }
-
 
 
 

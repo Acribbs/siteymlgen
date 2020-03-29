@@ -6,18 +6,19 @@
 #' kepted.
 #'
 #' @param infile Path to the input file
+#' @inheritParams tidyr::separate
+#' @importFrom magrittr %>%
 #' @return A matrix of the infile
-#' @export
 siteymlgen_parsenav <- function(.yml, dir="test/",
                                 title=NULL, type=NULL, left=NULL, right =NULL, ...){
   infiles <- list.files(dir, pattern = c("md","Rmd"))
   n <- length(infiles)
-  value = ""
+  previous = ""
   # loop over infiles and then assign text and href based off the name of file
   # Index as first navbar
 
 
-  home <- list(navbar_page("Home", href = "index.html"))
+  home <- list(ymlthis::navbar_page("Home", href = "index.html"))
 
 
   for(infile in infiles){
@@ -27,12 +28,16 @@ siteymlgen_parsenav <- function(.yml, dir="test/",
     if (infile.replace == "index"){
       next
     }else{
-      ident <- str_extract(infile.replace, "[A-Z]+[1-9]+")
-      name <- str_extract(infile.replace, "\\S+")
-      print(name)
+
+      # Need to state if the current matches previous and if it does add menu
+      current <- stringr::str_extract(infile.replace, "[A-Z][1-9]+")
+      name <- stringr::str_extract(infile.replace, "\\S+")
+
+
       href_infile <- paste0(name, ".html", sep="")
 
-      home <- rlist::list.append(home,navbar_page(name, href = href_infile))
+      home <- rlist::list.append(home,
+                                 ymlthis::navbar_page(name, href = href_infile))
 
     }
 
@@ -40,7 +45,7 @@ siteymlgen_parsenav <- function(.yml, dir="test/",
 }
 
     ymlthis::yml_empty() %>%
-    yml_navbar(
+      ymlthis::yml_navbar(
       title = "My Website",
       left = home)
 }

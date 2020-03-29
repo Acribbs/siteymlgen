@@ -7,7 +7,6 @@
 #'
 #' @param infile Path to the input file
 #' @return A matrix of the infile
-#' @export
 siteymlgen_output <- function(){
 
   ymlthis::yml_output(html_document(toc = TRUE, highlight = "textmate"))

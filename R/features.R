@@ -7,8 +7,10 @@
 #'
 #' @param infile Path to the input file
 #' @param authors Path to the input file
+#' @inheritParams tidyr::separate
+#' @importFrom magrittr %>%
 #' @return A matrix of the infile
-#' @export
+
 siteymlgen_features <- function(authors=NULL, date=NULL, affiliation=NULL){
     ymlthis::yml() %>%
     ymlthis::yml_author(
