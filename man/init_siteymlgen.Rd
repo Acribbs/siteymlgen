@@ -9,7 +9,10 @@ init_siteymlgen(
   authors = NULL,
   date = NULL,
   affiliation = NULL,
-  dir = NULL
+  dir = NULL,
+  left = NULL,
+  right = NULL,
+  navbar_title = NULL
 )
 }
 \arguments{

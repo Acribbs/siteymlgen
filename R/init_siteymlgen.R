@@ -10,11 +10,11 @@
 #' @importFrom magrittr "%>%"
 #' @return A matrix of the infile
 #' @export
-init_siteymlgen <- function(.yml=NULL, authors=NULL, date=NULL, affiliation=NULL, dir=NULL){
+init_siteymlgen <- function(.yml=NULL, authors=NULL, date=NULL, affiliation=NULL, dir=NULL, left=NULL, right=NULL, navbar_title=NULL){
 
   features <- siteymlgen_features(authors=authors, date=date, affiliation=affiliation)
 
-  parseenv <- siteymlgen_parsenav(dir)
+  parseenv <- siteymlgen_parsenav(dir, left=left, right=right, navbar_title=navbar_title)
 
   #output <- siteymlgen_output()
 

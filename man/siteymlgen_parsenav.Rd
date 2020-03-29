@@ -2,12 +2,12 @@
 % Please edit documentation in R/parsenav.R
 \name{siteymlgen_parsenav}
 \alias{siteymlgen_parsenav}
-\title{Load a Matrix}
+\title{Generate a navbar}
 \usage{
 siteymlgen_parsenav(
   .yml,
   dir = "test/",
-  title = NULL,
+  navbar_title = NULL,
   type = NULL,
   left = NULL,
   right = NULL,
@@ -20,11 +20,10 @@ siteymlgen_parsenav(
 \item{infile}{Path to the input file}
 }
 \value{
-A matrix of the infile
+a list of a list
 }
 \description{
-This function loads a file as a matrix. It assumes that the first column
-contains the rownames and the subsequent columns are the sample identifiers.
-Any rows with duplicated row names will be dropped with the first one being
-kepted.
+This function parses the directory for Rmarkdown documents and then parses
+the prefixes to generate an automatic heirarchy that is then used to pass
+to generate a yaml menu attribute
 }
