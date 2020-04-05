@@ -7,8 +7,10 @@ Authors@R:
            role = c("aut", "cre"),
            email = "adam.cribbs@ndorms.ox.ac.uk",
            comment = c(ORCID = "0000-0001-5288-3077"))
-Description: This package will automatically generate a _site.yml file for generating Rmarkdown websites.
+Description: Automatically generate a _site.yml file for your Rmarkdown website. Based upon the siteymlgen naming convention
+    for your .Rmd or .md files in a desired project directory.
 License: MIT
+URL: https://github.com/Acribbs/siteymlgen
 Encoding: UTF-8
 LazyData: true
 Depends:
@@ -22,4 +24,6 @@ Imports:
 	  stringr,
 	  lubridate,
 	  rmarkdown
+VignetteBuilder: knitr
+Roxygen: list(markdown = TRUE)
 RoxygenNote: 7.1.0
