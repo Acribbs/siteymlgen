@@ -11,15 +11,16 @@
 #' @importFrom magrittr %>%
 #' @return A matrix of the infile
 
-siteymlgen_features <- function(authors=NULL, date=NULL, affiliation=NULL){
+siteymlgen_features <- function(authors=NULL, date=NULL, affiliation=NULL, title=NULL,
+                                categories=NULL){
     ymlthis::yml() %>%
     ymlthis::yml_author(
       eval(authors),
       affiliation = affiliation
     ) %>%
-    ymlthis::yml_date("07/04/2019") %>%
-    ymlthis::yml_title("Reproducible Research in R") %>%
-    ymlthis::yml_category(c("r", "reprodicibility"))
+    ymlthis::yml_date(date) %>%
+    ymlthis::yml_title(title) %>%
+    ymlthis::yml_category(categories)
 }
 
 

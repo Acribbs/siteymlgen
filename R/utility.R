@@ -8,18 +8,19 @@
 #' @param infile Path to the input file
 #' @param authors Path to the input file
 #' @return A matrix of the infile
-siteymlgen_navbar_init <- function(left=NULL, title=NULL, right=NULL, type=NULL, navbar_list=NULL){
+siteymlgen_navbar_init <- function(left=NULL, title=NULL, right=NULL, type=NULL, navbar_list=NULL,
+                                   navbar_title=NULL){
   if (!is.null(left)){
     ymlthis::yml_empty() %>%
       siteymlgen_navbar(
-        title="Left",
+        title=navbar_title,
         type=type,
         left=navbar_list,
         right=NULL)
   }else if(!is.null(right)){
     ymlthis::yml_empty() %>%
       siteymlgen_navbar(
-        title="Right",
+        title=navbar_title,
         type=type,
         left=NULL,
         right=navbar_list)

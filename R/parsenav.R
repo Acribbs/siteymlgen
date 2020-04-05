@@ -35,9 +35,10 @@ siteymlgen_parsenav <- function(.yml, dir=NULL,
   # loop over infiles and then assign text and href based off the name of file
   # Index as first navbar
   navbar_list <- list(ymlthis::navbar_page("Home", href = "index.html"))
-
+  menu_list = list()
 
   for(infile in infiles){
+
 
     infile.replace <- gsub(infile, pattern = "\\.\\S+$", replacement = "")
 
@@ -54,33 +55,40 @@ siteymlgen_parsenav <- function(.yml, dir=NULL,
       navbar_list <- rlist::list.append(navbar_list,
                                         siteymlgen_navbar_page(name, href = href_infile))
     }else{
-      menu_list = list()
+
       # Need to make a list of navbar_page for menu
       name <- stringr::str_extract(infile.replace, "\\S+")
 
       href_infile <- paste0(name, ".html", sep="")
 
+      file_no <- stringr::str_extract(infile.replace, "[1-9]")
+      file_letter <- file_value <- stringr::str_extract(infile.replace, "[A-Z]")
+      max_files <- unlist(files_dict)[file_letter][[1]]
+
+
       if (grepl("[A-Z]1", infile)){
 
         first_name = name
         first_href = href_infile
-      } else{
+      } else if(file_no < max_files){
+
         menu_list <- rlist::list.append(menu_list,
                                         siteymlgen_navbar_page(name, href = href_infile))
 
-        if (grepl("[A-Z]1", infile)){
-          next
+      }else if(file_no == max_files){
 
-        }else{
+        menu_list <- rlist::list.append(menu_list,
+                                        siteymlgen_navbar_page(name, href = href_infile))
+
+
         navbar_list <- rlist::list.append(navbar_list, siteymlgen_navbar_page(first_name, href = first_href, menu=menu_list))
-        }
       }
 
 
     }
 
   }
-  siteymlgen_navbar_init(left=left, right=right, navbar_list=navbar_list)
+  siteymlgen_navbar_init(left=left, right=right, navbar_list=navbar_list, navbar_title=navbar_title)
 
 }
 

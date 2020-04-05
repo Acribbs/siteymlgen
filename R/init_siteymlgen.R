@@ -10,9 +10,12 @@
 #' @importFrom magrittr "%>%"
 #' @return A matrix of the infile
 #' @export
-init_siteymlgen <- function(.yml=NULL, authors=NULL, date=NULL, affiliation=NULL, dir=NULL, left=NULL, right=NULL, navbar_title=NULL){
+init_siteymlgen <- function(.yml=NULL, authors=NULL, date=lubridate::today(),
+                            affiliation=NULL, dir=NULL, left=NULL, right=NULL,
+                            navbar_title=NULL, title="siteymlgen", categories=NULL){
 
-  features <- siteymlgen_features(authors=authors, date=date, affiliation=affiliation)
+  features <- siteymlgen_features(authors=authors, date=as.character(date), affiliation=affiliation,
+                                  title=title, categories=categories)
 
   parseenv <- siteymlgen_parsenav(dir=dir, left=left, right=right, navbar_title=navbar_title)
 
@@ -26,10 +29,6 @@ init_siteymlgen <- function(.yml=NULL, authors=NULL, date=NULL, affiliation=NULL
 
 }
 
-
-
-#author_list <- list(author = c("Adam", "Natalia"))
-#yaml[names(author_list)] <- author_list
 
 
 
