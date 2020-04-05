@@ -16,7 +16,7 @@ init_siteymlgen <- function(.yml=NULL, authors=NULL, date=lubridate::today(),
                             name=NULL, output_dir=NULL, include=NULL,
                             exclude=NULL){
 
-  features <- siteymlgen_features(authors=authors, date=as.character(date), affiliation=affiliation,
+  features <- siteymlgen_toplevel(authors=authors, date=as.character(date), affiliation=affiliation,
                                   title=title, categories=categories, name=name, output_dir=output_dir, include=include,
                                   exclude=exclude)
 
