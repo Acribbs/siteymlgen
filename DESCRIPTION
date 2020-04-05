@@ -24,6 +24,8 @@ Imports:
 	  stringr,
 	  lubridate,
 	  rmarkdown
+Suggests: knitr,
+          rmarkdown
 VignetteBuilder: knitr
 Roxygen: list(markdown = TRUE)
 RoxygenNote: 7.1.0

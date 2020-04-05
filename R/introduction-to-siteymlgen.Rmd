@@ -1,0 +1,25 @@
+---
+title: "Put the title of your vignette here"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Put the title of your vignette here}
+  %\VignetteEngine{knitr::rmarkdown}
+  \usepackage[utf8]{inputenc}
+---
+
+```{r pandoc_check, echo=FALSE}
+if (!rmarkdown::pandoc_available()) {
+  cat("pandoc is required to use ymlthis. Please visit https://pandoc.org/ for more information.")
+  knitr::knit_exit()
+}
+```
+
+
+**sitegenyml** is a package to automate the generation of _site.yml file for building Rmarkdown websites. It 
+
+# Writing _site.yml with **sitegenyml**
+
+**sitegenyml** automates the process of generating a _site.yml file when using Rmarkdwn to generate a website. 
+
+Generating 
+
