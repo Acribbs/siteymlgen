@@ -27,9 +27,10 @@ names(foo)
 
 
 
-
+devtools::load_all()
 init_siteymlgen(authors = c("Adam","Paul"), left="yes", dir="~/Documents/siteymlgen/test/")
 
 
 infile = infiles[1]
 infile = infiles[2]
+infile = infiles[3]

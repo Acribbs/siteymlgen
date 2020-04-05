@@ -7,21 +7,29 @@ category:
 - r
 - reprodicibility
 navbar:
-  title: Left
+  title: Right
   type: ~
-  left:
-    text: B2_test1
-    href: B2_test1.html
+  left: ~
+  right:
+  - text: Home
+    href: index.html
+  - text: A1_test
+    href: A1_test.html
     icon: ~
-    menu: ~
+    menu:
+    - text: A2_test1
+      href: A2_test1.html
+      icon: ~
+      menu: ~
+  - text: B1_test1
+    href: B1_test1.html
+    icon: ~
     menu:
     - text: B2_test1
       href: B2_test1.html
       icon: ~
       menu: ~
-    '':
-      text: C1_test1
-      href: C1_test1.html
-      icon: ~
-      menu: ~
-  right: ~
+  - text: C1_test1
+    href: C1_test1.html
+    icon: ~
+    menu: ~

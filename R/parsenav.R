@@ -40,10 +40,10 @@ siteymlgen_parsenav <- function(.yml, dir=NULL,
   for(infile in infiles){
 
     infile.replace <- gsub(infile, pattern = "\\.\\S+$", replacement = "")
-    menu_list = list()
+
 
     if (infile.replace == "index"){
-      next
+
     }else if(!grepl(stringr::str_extract(infile.replace, "[A-Z]"),more_than_one)){
 
       # Need to state if the current matches previous and if it does add menu
@@ -54,27 +54,31 @@ siteymlgen_parsenav <- function(.yml, dir=NULL,
       navbar_list <- rlist::list.append(navbar_list,
                                         siteymlgen_navbar_page(name, href = href_infile))
     }else{
-
+      menu_list = list()
       # Need to make a list of navbar_page for menu
       name <- stringr::str_extract(infile.replace, "\\S+")
 
       href_infile <- paste0(name, ".html", sep="")
 
-      # If its the first one on the list then make it a navbar as normal
-      # If its second-thirs e.c.t then add it as a list
       if (grepl("[A-Z]1", infile)){
-        navbar_list <- rlist::list.append(navbar_list,
-                                          siteymlgen_navbar_page(name, href = href_infile))
+
+        first_name = name
+        first_href = href_infile
       } else{
         menu_list <- rlist::list.append(menu_list,
                                         siteymlgen_navbar_page(name, href = href_infile))
+
+        if (grepl("[A-Z]1", infile)){
+          next
+
+        }else{
+        navbar_list <- rlist::list.append(navbar_list, siteymlgen_navbar_page(first_name, href = first_href, menu=menu_list))
+        }
       }
 
 
-    #navbar_list <- rlist::list.append(siteymlgen_navbar_page(text="Hello", menu=menu_list))
-
-
     }
+
   }
   siteymlgen_navbar_init(left=left, right=right, navbar_list=navbar_list)
 
