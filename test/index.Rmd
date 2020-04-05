@@ -4,6 +4,6 @@ output: html_document
 ---
 
 ```{r setup, include=FALSE}
-#siteymlgen::init_siteymlgen(dir=".",authors = c("Adam","Paul"), left="yes")
-
+library(siteymlgen)
+siteymlgen::init_siteymlgen(authors = c("Adam","Paul"), left="yes", dir="~/Documents/siteymlgen/test/", navbar_title = "Main title", title = "hello", categories=c("r", "reprodicibility"))
 ```

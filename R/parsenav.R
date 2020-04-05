@@ -1,13 +1,8 @@
-#' Generate a navbar
-#'
-#' This function parses the directory for Rmarkdown documents and then parses
-#' the prefixes to generate an automatic heirarchy that is then used to pass
-#' to generate a yaml menu attribute
-#'
-#' @param infile Path to the input file
-#' @inheritParams tidyr::separate
-#' @importFrom magrittr %>%
-#' @return a list of a list
+# Generate a navbar
+#
+# This function parses the directory for Rmarkdown documents and then parses
+# the prefixes to generate an automatic heirarchy that is then used to pass
+# to generate a yaml menu attribute
 siteymlgen_parsenav <- function(.yml, dir=NULL,
                                 navbar_title=NULL, type=NULL, left=NULL, right =NULL, ...){
   infiles <- list.files(dir, pattern = c("md$"))
@@ -70,6 +65,9 @@ siteymlgen_parsenav <- function(.yml, dir=NULL,
 
         first_name = name
         first_href = href_infile
+
+        menu_list <- rlist::list.append(menu_list,
+                                        siteymlgen_navbar_page(name, href = href_infile))
       } else if(file_no < max_files){
 
         menu_list <- rlist::list.append(menu_list,
@@ -82,6 +80,8 @@ siteymlgen_parsenav <- function(.yml, dir=NULL,
 
 
         navbar_list <- rlist::list.append(navbar_list, siteymlgen_navbar_page(first_name, href = first_href, menu=menu_list))
+
+        menu_list = list()
       }
 
 

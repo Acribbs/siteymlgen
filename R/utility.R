@@ -1,13 +1,6 @@
-#' Load a Matrix
-#'
-#' This function loads a file as a matrix. It assumes that the first column
-#' contains the rownames and the subsequent columns are the sample identifiers.
-#' Any rows with duplicated row names will be dropped with the first one being
-#' kepted.
-#'
-#' @param infile Path to the input file
-#' @param authors Path to the input file
-#' @return A matrix of the infile
+# Function for generating a left or right navbar depending on the presence
+# of right or left. Will default to left if both right and left have values
+# supplied
 siteymlgen_navbar_init <- function(left=NULL, title=NULL, right=NULL, type=NULL, navbar_list=NULL,
                                    navbar_title=NULL, ...){
   if (!is.null(left)){
@@ -30,10 +23,8 @@ siteymlgen_navbar_init <- function(left=NULL, title=NULL, right=NULL, type=NULL,
 }
 
 
-#' @param title The title of the website
-#' @param type The color scheme for the navigation bar: either "default" or "inverse".
-#' @param left,right the side of the navbar a `navbar_page()` should go (see example)
-#'
+# A function to create the navbar. This was modified from the
+# navbar code of ymlthis
 siteymlgen_navbar <- function(.yml, title =NULL, type = NULL,
                        left = NULL, right = NULL, ...) {
   navbar <- list(
@@ -51,11 +42,8 @@ siteymlgen_navbar <- function(.yml, title =NULL, type = NULL,
 }
 
 
-#' @param text The link text
-#' @param href The link URL
-#' @param icon An icon to include
-#' @param menu drop-down menus specified by including another `navbar_page()`
-#'
+# A function to create the navbar page. This was modified from the
+# navbar code of ymlthis
 siteymlgen_navbar_page <- function(text = NULL, href = NULL, icon = NULL, menu = NULL, ...) {
     list(
       text = text,
