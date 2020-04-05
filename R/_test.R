@@ -31,6 +31,4 @@ devtools::load_all()
 init_siteymlgen(authors = c("Adam","Paul"), left="yes", dir="~/Documents/siteymlgen/test/")
 
 
-infile = infiles[1]
-infile = infiles[2]
-infile = infiles[3]
+init_siteymlgen(authors = c("Adam","Paul"), left="yes", dir="~/Documents/siteymlgen/test/", navbar_title = "Main title", title = "hello", categories=c("r", "reprodicibility"))

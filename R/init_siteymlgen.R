@@ -12,10 +12,13 @@
 #' @export
 init_siteymlgen <- function(.yml=NULL, authors=NULL, date=lubridate::today(),
                             affiliation=NULL, dir=NULL, left=NULL, right=NULL,
-                            navbar_title=NULL, title="siteymlgen", categories=NULL){
+                            navbar_title=NULL, title="siteymlgen", categories=NULL,
+                            name=NULL, output_dir=NULL, include=NULL,
+                            exclude=NULL){
 
   features <- siteymlgen_features(authors=authors, date=as.character(date), affiliation=affiliation,
-                                  title=title, categories=categories)
+                                  title=title, categories=categories, name=name, output_dir=output_dir, include=include,
+                                  exclude=exclude)
 
   parseenv <- siteymlgen_parsenav(dir=dir, left=left, right=right, navbar_title=navbar_title)
 

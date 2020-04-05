@@ -9,7 +9,7 @@
 #' @param authors Path to the input file
 #' @return A matrix of the infile
 siteymlgen_navbar_init <- function(left=NULL, title=NULL, right=NULL, type=NULL, navbar_list=NULL,
-                                   navbar_title=NULL){
+                                   navbar_title=NULL, ...){
   if (!is.null(left)){
     ymlthis::yml_empty() %>%
       siteymlgen_navbar(
