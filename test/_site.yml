@@ -1,13 +1,29 @@
-author: Adam Cribbs
+author:
+- Adam
+- Paul
 date: 07/04/2019
 title: Reproducible Research in R
 category:
 - r
 - reprodicibility
 navbar:
-  title: My Website
-  left:
+  title: Right
+  type: ~
+  left: ~
+  right:
   - text: Home
     href: index.html
-  - text: A1_test
-    href: A1_test.html
+  - text: C1_test1
+    href: C1_test1.html
+    menu:
+    - text: A1_test1
+      href: A1_test1.html
+    - text: A2_test1
+      href: A2_test1.html
+  - text: C1_test1
+    href: C1_test1.html
+    menu:
+    - text: B1_test1
+      href: B1_test1.html
+    - text: B2_test1
+      href: B2_test1.html

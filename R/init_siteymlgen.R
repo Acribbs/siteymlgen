@@ -14,7 +14,7 @@ init_siteymlgen <- function(.yml=NULL, authors=NULL, date=NULL, affiliation=NULL
 
   features <- siteymlgen_features(authors=authors, date=date, affiliation=affiliation)
 
-  parseenv <- siteymlgen_parsenav(dir, left=left, right=right, navbar_title=navbar_title)
+  parseenv <- siteymlgen_parsenav(dir=dir, left=left, right=right, navbar_title=navbar_title)
 
   #output <- siteymlgen_output()
 
