@@ -2,3 +2,9 @@
 .Rhistory
 .RData
 .Ruserdata
+.DS_Store
+docs
+inst/doc
+Untitled.Rmd
+Untitled.html
+rhub.R
