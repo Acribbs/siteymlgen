@@ -1,4 +1,4 @@
 library(testthat)
-library(ymlthis)
+library(siteymlgen)
 
-test_check("sitegenyml")
+test_check("siteymlgen")
