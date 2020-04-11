@@ -9,7 +9,7 @@ siteymlgen_parsenav <- function(.yml, dir=NULL,
 
   # Make a named list and save infiles with suffixes
   files_dict <- vector(mode="list", length=length(infiles))
-  names(files_dict) <- stringr::str_extract(infiles, "[A-Z]")
+  names(files_dict) <- as.character(stringr::str_extract(infiles, "[A-Z]"))
 
   for (infile in infiles){
     letter <- stringr::str_extract(infile, "^[A-Z]")
@@ -17,12 +17,13 @@ siteymlgen_parsenav <- function(.yml, dir=NULL,
     files_dict[[letter]] <- number
   }
 
-
-
   # Select all conditions where there are more than 2 files
-  files_dict[sapply(files_dict, is.null)] <- NULL
-  files_dict[sapply(files_dict, is.na)] <- NULL
+  files_dict <- files_dict[!sapply(files_dict, is.null)]
+  files_dict <- files_dict[!sapply(files_dict, is.na)]
+
   cond <- lapply(files_dict, function(x) x > 1)
+
+
   more_than_one <- paste0(names(files_dict[as.logical(cond)]), collapse="")
   equal_to_one <- paste0(names(files_dict[!as.logical(cond)]), collapse = "")
 

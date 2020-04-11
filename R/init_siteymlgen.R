@@ -38,7 +38,7 @@
 #' @importFrom magrittr %>%
 #' @return A _site.yml file
 #' @export
-init_siteymlgen <- function(.yml=NULL, authors=NULL, date=lubridate::today(),
+init_siteymlgen <- function(authors=NULL, date=lubridate::today(),
                             affiliation=NULL, dir=".", left=NULL, right=NULL,
                             navbar_title=NULL, title="siteymlgen", categories=NULL,
                             name=NULL, output_dir=NULL, include=NULL,

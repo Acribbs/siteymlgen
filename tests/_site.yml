@@ -1,8 +1,10 @@
 author:
-- Adam
-- Paul
+- name: Adam
+  affiliation: University of life
+- name: Paul
+  affiliation: University of life
 date: '2020-04-11'
-name: ~
+name: Joe Bloggs
 output_dir: ~
 include: ~
 exclude: ~
