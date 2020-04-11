@@ -18,6 +18,7 @@ knitr::opts_chunk$set(
 [![Codecov test coverage]()]()
 [![Lifecycle: maturing](https://img.shields.io/badge/lifecycle-maturing-blue.svg)](https://www.tidyverse.org/lifecycle/#maturing)
 [![CRAN status](]()
+[![R build status](https://github.com/Acribbs/siteymlgen/workflows/R-CMD-check/badge.svg)](https://github.com/Acribbs/siteymlgen/actions)
 <!-- badges: end -->
 
 siteymlgen automates the process of generating a `_site.yml` file used to control the layout of an Rmarkdown website. Often writing the _site.yml can be the most annoying task when generating a webite using Rmarkdown, particularly when there are multiple tabs and sub tabs. The `siteymlgen_init()` function should be placed in a code cell of your index.Rmd file. When your other `.Rmd` files are named according to the siteymlgen convention then the _site.yml will automatically populate. 
