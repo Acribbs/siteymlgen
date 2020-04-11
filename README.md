@@ -5,10 +5,9 @@
 
 <!-- badges: start -->
 
-[\[Build Status\](]() [![Build status]()]() [![Codecov test
-coverage]()]() [![Lifecycle:
+[![Lifecycle:
 maturing](https://img.shields.io/badge/lifecycle-maturing-blue.svg)](https://www.tidyverse.org/lifecycle/#maturing)
-[\[CRAN status\](]() [![R build
+[![R build
 status](https://github.com/Acribbs/siteymlgen/workflows/R-CMD-check/badge.svg)](https://github.com/Acribbs/siteymlgen/actions)
 <!-- badges: end -->
 
