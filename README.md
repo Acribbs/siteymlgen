@@ -8,7 +8,9 @@
 [\[Build Status\](]() [![Build status]()]() [![Codecov test
 coverage]()]() [![Lifecycle:
 maturing](https://img.shields.io/badge/lifecycle-maturing-blue.svg)](https://www.tidyverse.org/lifecycle/#maturing)
-[\[CRAN status\](]() <!-- badges: end -->
+[\[CRAN status\](]() [![R build
+status](https://github.com/Acribbs/siteymlgen/workflows/R-CMD-check/badge.svg)](https://github.com/Acribbs/siteymlgen/actions)
+<!-- badges: end -->
 
 siteymlgen automates the process of generating a `_site.yml` file used
 to control the layout of an Rmarkdown website. Often writing the
