@@ -38,7 +38,7 @@
 #' @importFrom magrittr %>%
 #' @return A _site.yml file
 #' @examples
-#' init(authors = c("Adam","Paul"), left="yes", dir="~/Documents/siteymlgen/inst/extdata/", navbar_title = "Main title", title = "hello", categories=c("r", "reprodicibility"))
+#' init(authors = c("Adam","Paul"), left="yes", navbar_title = "Main title", title = "hello", categories=c("r", "reprodicibility"))
 #' @export
 init <- function(authors=NULL, date=lubridate::today(),
                             affiliation=NULL, dir=getwd(), left=NULL, right=NULL,
