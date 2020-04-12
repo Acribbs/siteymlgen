@@ -3,7 +3,7 @@ context("test-navbar_yaml_results")
 
 test_that("Test that the navbar is generated accordingly", {
 
-  test_dir <- "../inst/extdata/"
+  test_dir <- system.file("extdata", package="siteymlgen")
   result <- siteymlgen_parsenav(dir=test_dir, left="yes", right=NULL, navbar_title="test")
 
   yaml_string <-"---
