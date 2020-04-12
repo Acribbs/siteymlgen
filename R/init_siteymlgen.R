@@ -4,8 +4,6 @@
 #' generation.
 #'
 #' @param authors A character or vector of characters of authors to add to the _site.yml
-#' @param name A character or a vector of characters describing
-#'   the name of the author(s)
 #' @param date A character or a vector of characters describing
 #'   the date
 #' @param affiliation A character or a vector of characters describing the
@@ -23,6 +21,8 @@
 #'   "siteymlgen" if no value is supplied
 #' @param categories A character or vector of characters describing the categories
 #'   for the website.
+#' @param name A character or a vector of characters describing
+#'   the name of the author(s)
 #' @param output_dir A character describing the output directory name for the final
 #'   Rmarkdown website.
 #' @param include A character or vector of characters detailing the extra files to include
