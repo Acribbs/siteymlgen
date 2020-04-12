@@ -39,7 +39,7 @@
 #' @return A _site.yml file
 #' @export
 init <- function(authors=NULL, date=lubridate::today(),
-                            affiliation=NULL, dir=".", left=NULL, right=NULL,
+                            affiliation=NULL, dir=getwd(), left=NULL, right=NULL,
                             navbar_title=NULL, title="siteymlgen", categories=NULL,
                             name=NULL, output_dir=NULL, include=NULL,
                             exclude=NULL, toc=TRUE, highlight=NULL, ...){
