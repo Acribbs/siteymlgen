@@ -8,7 +8,7 @@ init(
   authors = NULL,
   date = lubridate::today(),
   affiliation = NULL,
-  dir = ".",
+  dir = getwd(),
   left = NULL,
   right = NULL,
   navbar_title = NULL,
