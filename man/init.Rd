@@ -79,5 +79,5 @@ This function acts as an entry point for the initialisation of the yaml
 generation.
 }
 \examples{
-init_siteymlgen(authors = c("Adam","Paul"), left="yes", dir="~/Documents/siteymlgen/inst/extdata/", navbar_title = "Main title", title = "hello", categories=c("r", "reprodicibility"))
+init(authors = c("Adam","Paul"), left="yes", dir="~/Documents/siteymlgen/inst/extdata/", navbar_title = "Main title", title = "hello", categories=c("r", "reprodicibility"))
 }
