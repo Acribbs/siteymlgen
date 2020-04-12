@@ -15,9 +15,9 @@ siteymlgen automates the process of generating a `_site.yml` file used
 to control the layout of an Rmarkdown website. Often writing the
 \_site.yml can be the most annoying task when generating a webite using
 Rmarkdown, particularly when there are multiple tabs and sub tabs. The
-`siteymlgen_init()` function should be placed in a code cell of your
-index.Rmd file. When your other `.Rmd` files are named according to the
-siteymlgen convention then the \_site.yml will automatically populate.
+`init()` function should be placed in a code cell of your index.Rmd
+file. When your other `.Rmd` files are named according to the siteymlgen
+convention then the \_site.yml will automatically populate.
 
 ## Installation
 
@@ -52,7 +52,7 @@ home page.
 
 Add an empty YAML file named `_site.yml`, which will be populated by
 siteymlgen according to your file names and input options supplied to
-`siteymlgen_init()`.
+`init()`.
 
 Next configure your build tools in Rstudio so that you can build
 websites:
