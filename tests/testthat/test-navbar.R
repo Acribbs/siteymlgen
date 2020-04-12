@@ -1,8 +1,8 @@
 context("test-navbar_yaml_results")
 
+if (!rmarkdown::pandoc_available()) testthat::skip("Pandoc not found")
 
 test_that("Test that the navbar is generated accordingly", {
-
   test_dir <- system.file("extdata", package="siteymlgen")
   result <- siteymlgen_parsenav(dir=test_dir, left="yes", right=NULL, navbar_title="test")
 
