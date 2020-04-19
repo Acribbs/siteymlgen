@@ -41,10 +41,11 @@
 #' init(authors = c("Adam","Paul"), left="yes", navbar_title = "Main title", title = "hello", categories=c("r", "reprodicibility"))
 #' @export
 init <- function(authors=NULL, date=lubridate::today(),
-                            affiliation=NULL, dir=getwd(), left=NULL, right=NULL,
-                            navbar_title=NULL, title="siteymlgen", categories=NULL,
-                            name=NULL, output_dir=NULL, include=NULL,
-                            exclude=NULL, toc=TRUE, highlight=NULL, ...){
+                 affiliation=NULL, dir=getwd(), left=NULL, right=NULL,
+                 navbar_title=NULL, title="siteymlgen", categories=NULL,
+                 name=NULL, output_dir=NULL, include=NULL,
+                 exclude=NULL, toc=TRUE, toc_depth=4, toc_float=FALSE, ...){
+
 
   features <- siteymlgen_toplevel(authors=authors, date=as.character(date), affiliation=affiliation,
                                   title=title, categories=categories, name=name, output_dir=output_dir, include=include,
@@ -52,10 +53,9 @@ init <- function(authors=NULL, date=lubridate::today(),
 
   parseenv <- siteymlgen_parsenav(dir=dir, left=left, right=right, navbar_title=navbar_title)
 
-  output <- siteymlgen_output()
+  output <- siteymlgen_output(ymlthis::yml())
 
   yml_final <- c(features, parseenv, output)
-
 
   yaml::write_yaml(yml_final, file="_site.yml")
 

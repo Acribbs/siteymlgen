@@ -31,4 +31,4 @@ devtools::load_all()
 init_siteymlgen(authors = c("Adam","Paul"), left="yes", dir="~/Documents/siteymlgen/inst/extdata/")
 
 
-init_siteymlgen(authors = c("Adam","Paul"), left="yes", dir="~/Documents/siteymlgen/inst/extdata/", navbar_title = "Main title", title = "hello", categories=c("r", "reprodicibility"))
+init(authors = c("Adam","Paul"), left="yes", dir="~/Documents/siteymlgen/inst/extdata/", navbar_title = "Main title", title = "hello", categories=c("r", "reprodicibility"))

@@ -55,3 +55,22 @@ siteymlgen_navbar_page <- function(text = NULL, href = NULL, icon = NULL, menu =
       purrr::discard(ymlthis::is_yml_blank)
   }
 
+# This function created the
+siteymlgen_output <- function(){
+  list(
+    output = html_document,
+    ...
+  ) %>%
+    purrr::discard(ymlthis::is_yml_blank)
+}
+
+
+siteymlgen_toc_options <- function(toc=NULL, toc_depth=NULL, toc_title=NULL, ...){
+  list(
+  toc = toc,
+  "toc-depth" = toc_depth,
+  "toc-title" = toc_title,
+  ...
+  ) %>%
+    purrr::discard(ymlthis::is_yml_blank)
+  }
