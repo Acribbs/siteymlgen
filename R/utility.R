@@ -55,8 +55,8 @@ siteymlgen_navbar_page <- function(text = NULL, href = NULL, icon = NULL, menu =
       purrr::discard(ymlthis::is_yml_blank)
   }
 
-# This function created the
-siteymlgen_output <- function(){
+# This function creats the output list
+siteymlgen_output_list <- function(html_document="html_document", ...){
   list(
     output = html_document,
     ...

@@ -49,9 +49,8 @@ navbar:
     icon: ~
     menu: ~
   right: ~
-author: Adam Cribbs
-date: '`r format(Sys.Date())`'
-output: rmarkdown::html_document
-toc: yes
-toc-depth: 2.0
-toc-title: ~
+output:
+  html_document:
+    toc: yes
+    toc-depth: ~
+    toc-title: ~

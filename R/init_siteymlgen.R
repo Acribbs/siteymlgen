@@ -53,7 +53,7 @@ init <- function(authors=NULL, date=lubridate::today(),
 
   parseenv <- siteymlgen_parsenav(dir=dir, left=left, right=right, navbar_title=navbar_title)
 
-  output <- siteymlgen_output(ymlthis::yml())
+  output <- siteymlgen_output(toc=toc, toc_depth=toc_depth, toc_title=toc_title)
 
   yml_final <- c(features, parseenv, output)
 
