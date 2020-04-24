@@ -1,6 +1,7 @@
 ---
 title: "Untitled"
 output: html_document
+icon: fa-gear
 ---
 
 ```{r setup, include=FALSE}

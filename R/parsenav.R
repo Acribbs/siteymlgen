@@ -35,6 +35,11 @@ siteymlgen_parsenav <- function(.yml, dir=NULL,
 
   for(infile in infiles){
 
+    # Locate the icon within the Rnd file
+    sensortext <- readChar(infile, file.info(infile)$size)
+    icon <- stringr::str_replace(stringr::str_extract(sensortext, "icon: (.+)"), "icon: ", "")
+    icon <- replace(icon, is.na(icon), '~')
+
 
     infile.replace <- gsub(infile, pattern = "\\.\\S+$", replacement = "")
 
@@ -49,7 +54,7 @@ siteymlgen_parsenav <- function(.yml, dir=NULL,
       href_infile <- paste0(name, ".html", sep="")
 
       navbar_list <- rlist::list.append(navbar_list,
-                                        siteymlgen_navbar_page(name, href = href_infile))
+                                        siteymlgen_navbar_page(name, href = href_infile, icon=icon))
     }else{
 
       # Need to make a list of navbar_page for menu
@@ -68,19 +73,19 @@ siteymlgen_parsenav <- function(.yml, dir=NULL,
         first_href = href_infile
 
         menu_list <- rlist::list.append(menu_list,
-                                        siteymlgen_navbar_page(name, href = href_infile))
+                                        siteymlgen_navbar_page(name, href = href_infile, icon=icon))
       } else if(file_no < max_files){
 
         menu_list <- rlist::list.append(menu_list,
-                                        siteymlgen_navbar_page(name, href = href_infile))
+                                        siteymlgen_navbar_page(name, href = href_infile, icon=icon))
 
       }else if(file_no == max_files){
 
         menu_list <- rlist::list.append(menu_list,
-                                        siteymlgen_navbar_page(name, href = href_infile))
+                                        siteymlgen_navbar_page(name, href = href_infile, icon=icon))
 
 
-        navbar_list <- rlist::list.append(navbar_list, siteymlgen_navbar_page(first_name, href = first_href, menu=menu_list))
+        navbar_list <- rlist::list.append(navbar_list, siteymlgen_navbar_page(first_name, href = first_href, menu=menu_list, icon=icon))
 
         menu_list = list()
       }
