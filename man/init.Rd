@@ -18,8 +18,13 @@ init(
   output_dir = NULL,
   include = NULL,
   exclude = NULL,
-  toc = TRUE,
+  toc = FALSE,
+  toc_depth = NULL,
+  toc_title = NULL,
+  toc_float = FALSE,
+  theme = "united",
   highlight = NULL,
+  css = NULL,
   ...
 )
 }
@@ -79,5 +84,5 @@ This function acts as an entry point for the initialisation of the yaml
 generation.
 }
 \examples{
-init(authors = c("Adam","Paul"), left="yes", dir="~/Documents/siteymlgen/inst/extdata/", navbar_title = "Main title", title = "hello", categories=c("r", "reprodicibility"))
+init(authors = c("Adam","Paul"), left="yes", navbar_title = "Main title", title = "hello", categories=c("r", "reprodicibility"))
 }
