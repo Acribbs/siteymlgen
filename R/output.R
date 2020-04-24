@@ -15,14 +15,18 @@ siteymlgen_output <- function(toc=FALSE, toc_depth=NULL, toc_title=NULL,
     toc_depth=toc_depth
   }
 
-  test <- siteymlgen_output_list()
+  output <- siteymlgen_output_list()
 
-  suppressWarnings(test$output$html_document <- siteymlgen_toc_options(toc=toc, toc_depth=toc_depth, toc_title=toc_title,
-                                                                       toc_float=toc_float))
-  suppressWarnings(test$output$html_document <- siteymlgen_appearance(theme=theme, highlight=highlight, css=css))
+  toc_list <- siteymlgen_toc_options(toc=toc, toc_depth=toc_depth, toc_title=toc_title,
+                         toc_float=toc_float)
+  appearance <- siteymlgen_appearance(theme=theme, highlight=highlight, css=css)
 
-  test$output[1] <- NULL
-  return(test)
+  output_list <- c(toc_list, appearance)
+
+  suppressWarnings(output$output$html_document <- output_list)
+
+  output$output[1] <- NULL
+  return(output)
 }
 
 
