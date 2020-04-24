@@ -88,3 +88,10 @@ siteymlgen_appearance <- function(theme=NULL, highlight=NULL, css=NULL, ...){
     purrr::discard(ymlthis::is_yml_blank)
 }
 
+# Function from ymlthis to parse output of testthat
+stringify_yaml <- function(x) {
+  x %>%
+  ymlthis:::capture_yml() %>%
+  paste(collapse = "\n")
+}
+
