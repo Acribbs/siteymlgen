@@ -65,13 +65,26 @@ siteymlgen_output_list <- function(html_document="html_document", ...){
 }
 
 
-siteymlgen_toc_options <- function(toc=NULL, toc_depth=NULL, toc_title=NULL, ...){
+siteymlgen_toc_options <- function(toc=NULL, toc_float=NULL, toc_depth=NULL, toc_title=NULL, ...){
 
   list(
   "toc" = toc,
+  "toc_float" = toc_float,
   "toc_depth" = toc_depth,
   "toc_title" = toc_title,
   ...
   ) %>%
     purrr::discard(ymlthis::is_yml_blank)
   }
+
+siteymlgen_appearance <- function(theme=NULL, highlight=NULL, css=NULL, ...){
+
+  list(
+    "theme" = theme,
+    "highlight" = highlight,
+    "css" = css,
+    ...
+  ) %>%
+    purrr::discard(ymlthis::is_yml_blank)
+}
+

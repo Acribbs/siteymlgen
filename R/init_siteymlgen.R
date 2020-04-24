@@ -44,7 +44,8 @@ init <- function(authors=NULL, date=lubridate::today(),
                  affiliation=NULL, dir=getwd(), left=NULL, right=NULL,
                  navbar_title=NULL, title="siteymlgen", categories=NULL,
                  name=NULL, output_dir=NULL, include=NULL,
-                 exclude=NULL, toc=FALSE, toc_depth=NULL, toc_title= NULL, toc_float=FALSE, ...){
+                 exclude=NULL, toc=FALSE, toc_depth=NULL, toc_title= NULL, toc_float=FALSE,
+                 theme="united", highlight=NULL, css=NULL, ...){
 
 
   features <- siteymlgen_toplevel(authors=authors, date=as.character(date), affiliation=affiliation,
@@ -53,7 +54,8 @@ init <- function(authors=NULL, date=lubridate::today(),
 
   parseenv <- siteymlgen_parsenav(dir=dir, left=left, right=right, navbar_title=navbar_title)
 
-  output <- siteymlgen_output(toc=toc, toc_depth=toc_depth, toc_title=toc_title)
+  output <- siteymlgen_output(toc=toc, toc_depth=toc_depth, toc_title=toc_title, toc_float=toc_float,
+                              theme=theme, highlight=highlight, css=css)
 
   yml_final <- c(features, parseenv, output)
 
