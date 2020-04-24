@@ -25,7 +25,8 @@ Imports:
 	  lubridate,
 	  rmarkdown,
 	  rlist,
-	  purrr
+	  purrr,
+	  tidyverse
 Suggests: 
     knitr,
     rmarkdown,
