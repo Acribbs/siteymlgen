@@ -1,7 +1,7 @@
 author:
 - Adam
 - Paul
-date: '2020-04-11'
+date: '2020-04-23'
 name: ~
 output_dir: ~
 include: ~
@@ -49,103 +49,8 @@ navbar:
     icon: ~
     menu: ~
   right: ~
-knitr:
-  opts_knit: ~
-  opts_chunk:
-    dev: png
-    dpi: 96.0
-    fig.width: 7.0
-    fig.height: 5.0
-    fig.retina: 2.0
-  knit_hooks: ~
-  opts_hooks: ~
-  opts_template: ~
-pandoc:
-  to: html
-  from: markdown+autolink_bare_uris+tex_math_single_backslash+smart
-  args:
-  - --email-obfuscation
-  - none
-  - --self-contained
-  - --standalone
-  - --section-divs
-  - --table-of-contents
-  - --toc-depth
-  - '3'
-  - --template
-  - /Library/Frameworks/R.framework/Versions/3.6/Resources/library/rmarkdown/rmd/h/default.html
-  - --no-highlight
-  - --variable
-  - highlightjs=1
-  keep_tex: no
-  latex_engine: pdflatex
-  ext: ~
-keep_md: no
-clean_supporting: yes
-df_print: default
-pre_knit: !expr |
-  function (...)
-  {
-      op(base(...), overlay(...))
-  }
-post_knit: !expr |
-  function (...)
-  {
-      op(base(...), overlay(...))
-  }
-pre_processor: !expr |
-  function (...)
-  {
-      op(base(...), overlay(...))
-  }
-intermediates_generator: !expr |
-  function (original_input, intermediates_dir)
-  {
-      copy_render_intermediates(original_input, intermediates_dir,
-          !self_contained)
-  }
-post_processor: !expr |
-  function (metadata, input_file, output_file, clean, verbose)
-  {
-      if (length(preserved_chunks) == 0 && !isTRUE(copy_resources) &&
-          self_contained)
-          return(output_file)
-      output_str <- read_utf8(output_file)
-      if (length(preserved_chunks) > 0) {
-          for (i in names(preserved_chunks)) {
-              output_str <- gsub(paste0("<p>", i, "</p>"), i, output_str,
-                  fixed = TRUE, useBytes = TRUE)
-              output_str <- gsub(paste0(" id=\"[^\"]*?", i, "[^\"]*?\" "),
-                  " ", output_str, useBytes = TRUE)
-          }
-          output_str <- restorePreserveChunks(output_str, preserved_chunks)
-      }
-      if (copy_resources) {
-          output_str <- copy_html_resources(one_string(output_str),
-              lib_dir, output_dir)
-      }
-      else if (!self_contained) {
-          image_relative <- function(img_src, src) {
-              in_file <- utils::URLdecode(src)
-              if (grepl("^[.][.]", in_file))
-                  return(img_src)
-              if (length(in_file) && file.exists(in_file)) {
-                  img_src <- sub(src, utils::URLencode(normalized_relative_to(output_dir,
-                    in_file)), img_src, fixed = TRUE)
-              }
-              img_src
-          }
-          output_str <- process_images(output_str, image_relative)
-      }
-      write_utf8(output_str, output_file)
-      output_file
-  }
-on_exit: !expr |
-  function ()
-  {
-      if (is.function(base))
-          base()
-      if (is.function(overlay))
-          overlay()
-  }
-output: []
+output:
+  html_document:
+    toc: yes
+    toc_depth: 1
+    toc_title: ~

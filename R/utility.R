@@ -66,10 +66,11 @@ siteymlgen_output_list <- function(html_document="html_document", ...){
 
 
 siteymlgen_toc_options <- function(toc=NULL, toc_depth=NULL, toc_title=NULL, ...){
+
   list(
-  toc = toc,
-  "toc-depth" = toc_depth,
-  "toc-title" = toc_title,
+  "toc" = toc,
+  "toc_depth" = toc_depth,
+  "toc_title" = toc_title,
   ...
   ) %>%
     purrr::discard(ymlthis::is_yml_blank)

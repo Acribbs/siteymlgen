@@ -1,7 +1,7 @@
 author:
 - Adam
 - Paul
-date: '2020-04-19'
+date: '2020-04-23'
 name: ~
 output_dir: ~
 include: ~
@@ -52,5 +52,5 @@ navbar:
 output:
   html_document:
     toc: yes
-    toc-depth: ~
-    toc-title: ~
+    toc_depth: ~
+    toc_title: ~
