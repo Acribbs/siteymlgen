@@ -44,7 +44,7 @@ init <- function(authors=NULL, date=lubridate::today(),
                  affiliation=NULL, dir=getwd(), left=NULL, right=NULL,
                  navbar_title=NULL, title="siteymlgen", categories=NULL,
                  name=NULL, output_dir=NULL, include=NULL,
-                 exclude=NULL, toc=TRUE, toc_depth=4, toc_float=FALSE, ...){
+                 exclude=NULL, toc=FALSE, toc_depth=NULL, toc_title= NULL, toc_float=FALSE, ...){
 
 
   features <- siteymlgen_toplevel(authors=authors, date=as.character(date), affiliation=affiliation,
