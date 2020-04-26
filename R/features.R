@@ -7,7 +7,8 @@
 siteymlgen_toplevel <- function(date=NULL, authors=NULL, name=NULL , affiliation=NULL, title="siteymlgen",
                                 categories=NULL, output_dir=NULL, include=NULL,
                                 exclude=NULL, ...){
-    ymlthis::yml() %>%
+
+  ymlthis::yml() %>%
     ymlthis::yml_date(date) %>%
     ymlthis::yml_author(
       eval(authors),

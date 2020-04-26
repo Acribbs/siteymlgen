@@ -48,9 +48,9 @@
 #' navbar_title = "Main title", title = "hello",
 #' categories=c("r", "reprodicibility"))
 #' @export
-init <- function(authors=NULL, date=lubridate::today(),
-                 affiliation=NULL, dir=getwd(), left=NULL, right=NULL,
-                 navbar_title=NULL, title="siteymlgen", categories=NULL,
+init <- function(authors="author", date=lubridate::today(),
+                 affiliation=NULL, dir=getwd(), left="yes", right=NULL,
+                 navbar_title="Title", title="siteymlgen", categories=NULL,
                  name=NULL, output_dir=NULL, include=NULL,
                  exclude=NULL, toc=FALSE, toc_depth=NULL, toc_title= NULL, toc_float=FALSE,
                  theme="united", highlight=NULL, css=NULL){

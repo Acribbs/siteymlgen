@@ -5,8 +5,15 @@
 # to generate a yaml menu attribute
 siteymlgen_parsenav <- function(.yml, dir=NULL,
                                 navbar_title=NULL, type=NULL, left=NULL, right =NULL, ...){
-  infiles <- list.files(dir, pattern = c("md$"))
 
+  # Enforce left is null if right is yes.
+  if(length(is.na(right)) != 0){
+    left=NULL
+  }else{
+    right = NULL
+  }
+
+  infiles <- list.files(dir, pattern = c("md$"))
   # Make a named list and save infiles with suffixes
   files_dict <- vector(mode="list", length=length(infiles))
   names(files_dict) <- as.character(stringr::str_extract(infiles, "[A-Z]"))
