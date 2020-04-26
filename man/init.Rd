@@ -5,13 +5,13 @@
 \title{Initiate the yaml generation}
 \usage{
 init(
-  authors = NULL,
+  authors = "author",
   date = lubridate::today(),
   affiliation = NULL,
   dir = getwd(),
-  left = NULL,
+  left = "yes",
   right = NULL,
-  navbar_title = NULL,
+  navbar_title = "Title",
   title = "siteymlgen",
   categories = NULL,
   name = NULL,

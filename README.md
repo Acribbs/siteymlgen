@@ -39,7 +39,7 @@ stick to the following naming convention:
 
 `[A-Z][1-9]_TitleofTab.Rmd`
 
-e.g. `A1_FileOne.Rmd`
+e.g. `A1_FileOne.Rmd`
 
 The capital first letter of the file name controls the position of the
 tab in the navbar. The number controls the position within the dropdown

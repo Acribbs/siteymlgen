@@ -55,6 +55,8 @@ init <- function(authors="author", date=lubridate::today(),
                  exclude=NULL, toc=FALSE, toc_depth=NULL, toc_title= NULL, toc_float=FALSE,
                  theme="united", highlight=NULL, css=NULL){
 
+  # Create a _site.yml file
+  file.create("_site.yml")
 
   features <- siteymlgen_toplevel(authors=authors,
                                   date=as.character(date),
