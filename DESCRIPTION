@@ -1,6 +1,6 @@
 Package: siteymlgen
 Title: Automatically Generate _site.yml File for Rmarkdown
-Version: 1.0.0
+Version: 0.0.0.9000
 Authors@R: 
     person(given = "Adam",
            family = "Cribbs",

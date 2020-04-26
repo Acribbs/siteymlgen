@@ -1,4 +1,4 @@
---
+---
 title: "Automating rmakrdown html output"
 author: "Adam P Cribbs"
 date: "`r format(Sys.Date(), '%m/%d/%Y')`"
@@ -82,9 +82,12 @@ refer to the `?init` help section :
 
 ```{r echo=TRUE, eval=FALSE}
 init(authors = c("Adam","Paul"), 
-     left="yes", dir="~/Documents/siteymlgen/inst/extdata/", 
-     navbar_title = "Main title", title = "hello", 
-     categories=c("r", "reprodicibility"), toc=TRUE, 
+     left="yes",
+     dir="~/Documents/siteymlgen/inst/extdata/", 
+     navbar_title = "Main title", 
+     title = "hello", 
+     categories=c("r", "reprodicibility"), 
+     toc=TRUE, 
      toc_depth = 3)
 ```
 
