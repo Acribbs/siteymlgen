@@ -1,0 +1,28 @@
+author:
+- Adam
+- Paul
+date: '2020-04-26'
+name: ~
+output_dir: ~
+include: ~
+exclude: ~
+title: hello
+category:
+- r
+- reprodicibility
+navbar:
+  title: Main title
+  type: ~
+  left:
+  - text: Home
+    href: index.html
+  right: ~
+output:
+  html_document:
+    toc: no
+    toc_float: no
+    toc_depth: ~
+    toc_title: ~
+    theme: united
+    highlight: ~
+    css: ~
