@@ -1,15 +1,20 @@
 Package: siteymlgen
-Title: Automatically generate _site.yml file for Rmarkdown
-Version: 0.0.0.9000
+Title: Automatically Generate _site.yml File for Rmarkdown
+Version: 1.0.0
 Authors@R: 
     person(given = "Adam",
            family = "Cribbs",
            role = c("aut", "cre"),
            email = "adam.cribbs@ndorms.ox.ac.uk",
            comment = c(ORCID = "0000-0001-5288-3077"))
-Description: Automatically generate a _site.yml file for your Rmarkdown website. Based upon the siteymlgen naming convention
-    for your .Rmd or .md files in a desired project directory.
-License: MIT
+Description: The goal of siteymlgen is to makeit easy to organise
+  the building of your R Markdown website. 
+  The init() function placed within the first code chunk of the index.Rmd
+  file of an R project directory will initiate the generation of an automatically 
+  written _site.yml file. siteymlgen recomends a specific naming
+  convention for your markdown files. This naming will ensure that
+  your navbar layout is ordered according to a heirarchy.
+License: MIT + file LICENSE
 URL: https://github.com/Acribbs/siteymlgen
 Encoding: UTF-8
 LazyData: true
@@ -29,7 +34,6 @@ Imports:
 	  tidyverse
 Suggests: 
     knitr,
-    rmarkdown,
     testthat,
     spelling
 VignetteBuilder: knitr

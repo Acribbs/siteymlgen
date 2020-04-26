@@ -81,7 +81,11 @@ You can specify values to modify the basic yaml output. For a full range of inpu
 refer to the `?init` help section :
 
 ```{r echo=TRUE, eval=FALSE}
-init(authors = c("Adam","Paul"), left="yes", dir="~/Documents/siteymlgen/inst/extdata/", navbar_title = "Main title", title = "hello", categories=c("r", "reprodicibility"), toc=TRUE, toc_depth = 3)
+init(authors = c("Adam","Paul"), 
+     left="yes", dir="~/Documents/siteymlgen/inst/extdata/", 
+     navbar_title = "Main title", title = "hello", 
+     categories=c("r", "reprodicibility"), toc=TRUE, 
+     toc_depth = 3)
 ```
 
 When you build your website within Rstudio the `init` function will parse the directory of `.Rmd` 

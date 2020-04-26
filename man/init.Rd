@@ -24,8 +24,7 @@ init(
   toc_float = FALSE,
   theme = "united",
   highlight = NULL,
-  css = NULL,
-  ...
+  css = NULL
 )
 }
 \arguments{
@@ -71,18 +70,31 @@ in the final Rmarkdown build}
 \item{toc}{Specify whether a table of contents is required for your website, defaults
 to TRUE}
 
+\item{toc_depth}{An integer to specify the depth of the table of contents}
+
+\item{toc_title}{A character that sets the toable of contents title}
+
+\item{toc_float}{A boolean to specify if the table of contents is static or floats.
+defaults to FALSE.}
+
+\item{theme}{An Rmarkdown theme to set the render output. Defaults to 'united'.}
+
 \item{highlight}{Syntax highlighting style for html_output from the rmarkdown package.
 Supported styles include "default",
 "tango", "pygments", "kate", "monochrome", "espresso", "zenburn", "haddock",
 and "textmate". Pass NULL to prevent syntax highlighting}
+
+\item{css}{Specify custom css.}
 }
 \value{
-A _site.yml file
+A _site.yml file populated with yaml code.
 }
 \description{
 This function acts as an entry point for the initialisation of the yaml
 generation.
 }
 \examples{
-init(authors = c("Adam","Paul"), left="yes", navbar_title = "Main title", title = "hello", categories=c("r", "reprodicibility"))
+init(authors = c("Adam","Paul"), left="yes",
+navbar_title = "Main title", title = "hello",
+categories=c("r", "reprodicibility"))
 }

@@ -35,29 +35,53 @@
 #'   Supported styles include "default",
 #'   "tango", "pygments", "kate", "monochrome", "espresso", "zenburn", "haddock",
 #'   and "textmate". Pass NULL to prevent syntax highlighting
+#' @param toc_depth An integer to specify the depth of the table of contents
+#' @param toc_title A character that sets the toable of contents title
+#' @param toc_float A boolean to specify if the table of contents is static or floats.
+#'   defaults to FALSE.
+#' @param theme An Rmarkdown theme to set the render output. Defaults to 'united'.
+#' @param css Specify custom css.
 #' @importFrom magrittr %>%
-#' @return A _site.yml file
+#' @return A _site.yml file populated with yaml code.
 #' @examples
-#' init(authors = c("Adam","Paul"), left="yes", navbar_title = "Main title", title = "hello", categories=c("r", "reprodicibility"))
+#' init(authors = c("Adam","Paul"), left="yes",
+#' navbar_title = "Main title", title = "hello",
+#' categories=c("r", "reprodicibility"))
 #' @export
 init <- function(authors=NULL, date=lubridate::today(),
                  affiliation=NULL, dir=getwd(), left=NULL, right=NULL,
                  navbar_title=NULL, title="siteymlgen", categories=NULL,
                  name=NULL, output_dir=NULL, include=NULL,
                  exclude=NULL, toc=FALSE, toc_depth=NULL, toc_title= NULL, toc_float=FALSE,
-                 theme="united", highlight=NULL, css=NULL, ...){
+                 theme="united", highlight=NULL, css=NULL){
 
 
-  features <- siteymlgen_toplevel(authors=authors, date=as.character(date), affiliation=affiliation,
-                                  title=title, categories=categories, name=name, output_dir=output_dir, include=include,
+  features <- siteymlgen_toplevel(authors=authors,
+                                  date=as.character(date),
+                                  affiliation=affiliation,
+                                  title=title,
+                                  categories=categories,
+                                  name=name,
+                                  output_dir=output_dir,
+                                  include=include,
                                   exclude=exclude)
 
-  parseenv <- siteymlgen_parsenav(dir=dir, left=left, right=right, navbar_title=navbar_title)
+  parseenv <- siteymlgen_parsenav(dir=dir,
+                                  left=left,
+                                  right=right,
+                                  navbar_title=navbar_title)
 
-  output <- siteymlgen_output(toc=toc, toc_depth=toc_depth, toc_title=toc_title, toc_float=toc_float,
-                              theme=theme, highlight=highlight, css=css)
+  output <- siteymlgen_output(toc=toc,
+                              toc_depth=toc_depth,
+                              toc_title=toc_title,
+                              toc_float=toc_float,
+                              theme=theme,
+                              highlight=highlight,
+                              css=css)
 
-  yml_final <- c(features, parseenv, output)
+  yml_final <- c(features,
+                 parseenv,
+                 output)
 
   yaml::write_yaml(yml_final, file="_site.yml")
 

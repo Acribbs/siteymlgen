@@ -11,13 +11,12 @@ maturing](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https
 status](https://github.com/Acribbs/siteymlgen/workflows/R-CMD-check/badge.svg)](https://github.com/Acribbs/siteymlgen/actions)
 <!-- badges: end -->
 
-siteymlgen automates the process of generating a `_site.yml` file used
-to control the layout of an Rmarkdown website. Often writing the
-\_site.yml can be the most annoying task when generating a webite using
-Rmarkdown, particularly when there are multiple tabs and sub tabs. The
-`init()` function should be placed in a code cell of your index.Rmd
-file. When your other `.Rmd` files are named according to the siteymlgen
-convention then the \_site.yml will automatically populate.
+siteymlgen makes it easy to organise R Markdown website output. The
+init() function placed within the first code chunk of the index.Rmd file
+of an R project directory will initiate the generation of an
+automatically written \_site.yml file. siteymlgen recomends a specific
+naming convention for your markdown files. This naming will ensure that
+your navbar layout is ordered according to a heirarchy.
 
 ## Installation
 
@@ -35,12 +34,17 @@ devtools::install_github("Acribbs/siteymlgen")
 
 ## Naming convention
 
-In order to control the layout of your `_site.yml` file then you will
-need to name your files according to the following naming convention:
+In order to control how your website navbar is ordered then you need to
+stick to the following naming convention:
 
-\[A-Z\]\[1-9\]\_TitleofTab.Rmd
+`[A-Z][1-9]_TitleofTab.Rmd`
 
-The first letter of the file name controls the
+e.g. `A1_FileOne.Rmd`
+
+The capital first letter of the file name controls the position of the
+tab in the navbar. The number controls the position within the dropdown
+menu, if you do not want a dropdown menu then label the file
+\[A-Z\]1\_TitleofTab.Rmd.
 
 # Example
 

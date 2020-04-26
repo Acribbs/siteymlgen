@@ -36,7 +36,7 @@ siteymlgen_parsenav <- function(.yml, dir=NULL,
   for(infile in infiles){
 
     # Locate the icon within the Rnd file
-    sensortext <- readChar(infile, file.info(infile)$size)
+    sensortext <- readChar(paste0(dir, "/",infile), file.info(paste0(dir, "/",infile))$size)
     icon <- stringr::str_replace(stringr::str_extract(sensortext, "icon: (.+)"), "icon: ", "")
     icon <- replace(icon, is.na(icon), '~')
 
