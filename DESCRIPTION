@@ -11,7 +11,7 @@ Description: The goal of siteymlgen is to make it easy to organise
   the building of your R Markdown website. 
   The init() function placed within the first code chunk of the index.Rmd
   file of an R project directory will initiate the generation of an automatically 
-  written _site.yml file. siteymlgen recomends a specific naming
+  written _site.yml file. siteymlgen recommends a specific naming
   convention for your markdown files. This naming will ensure that
   your navbar layout is ordered according to a hierarchy.
 License: MIT + file LICENSE
