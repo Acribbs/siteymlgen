@@ -89,7 +89,7 @@
 <div class="page-header"><h1 class="hasAnchor">
 <a href="#siteymlgen-automatically-generate-a-_siteyml-for-rmarkdown-websites" class="anchor"></a>siteymlgen: Automatically generate a _site.yml for Rmarkdown websites</h1></div>
 <!-- badges: start -->
-
+<p><a href="https://img.shields.io/badge/lifecycle-maturing-blue.svg" class="uri">https://img.shields.io/badge/lifecycle-maturing-blue.svg</a> <a href="https://github.com/Acribbs/siteymlgen/actions"><img src="https://github.com/Acribbs/siteymlgen/workflows/R-CMD-check/badge.svg" alt="R build status"></a> <!-- badges: end --></p>
 <p>siteymlgen makes it easy to organise R Markdown website output. The init() function placed within the first code chunk of the index.Rmd file of an R project directory will initiate the generation of an automatically written _site.yml file. siteymlgen recomends a specific naming convention for your markdown files. This naming will ensure that your navbar layout is ordered according to a heirarchy.</p>
 <div id="installation" class="section level2">
 <h2 class="hasAnchor">
@@ -119,8 +119,7 @@
 <span class="fu"><a href="https://rdrr.io/r/base/files.html">file.copy</a></span>(<span class="fu"><a href="https://rdrr.io/r/base/system.file.html">system.file</a></span>(<span class="st">"extdata"</span>, <span class="kw">package</span><span class="kw">=</span><span class="st">"siteymlgen"</span>), <span class="fu"><a href="https://rdrr.io/r/base/paste.html">paste0</a></span>(<span class="fu"><a href="https://rdrr.io/r/base/getwd.html">getwd</a></span>(), <span class="st">"/test"</span>), <span class="kw">recursive</span> <span class="kw">=</span> <span class="fl">TRUE</span>)</pre></div>
 <p>Then naviage to the directory and create a new R project.</p>
 <p>All <code>.Rmd</code> files should be located within a single directory. <code>index.Rmd</code> will become the home page.</p>
-<p>Add an empty YAML file named <code>_site.yml</code>, which will be populated by siteymlgen according to your file names and input options supplied to <code><a href="reference/init.html">init()</a></code>.</p>
-<p>Set up build tools so that you can build an R markdown website and then “Build Website”:</p>
+<p>Add an empty YAML file named <code>_site.yml</code>, which will be populated by siteymlgen according to your file names and input options supplied to <code><a href="reference/init.html">init()</a></code>. ?pkgdown::build_site() Set up build tools so that you can build an R markdown website and then “Build Website”:</p>
 <p><img src="reference/figures/README-configure.png"></p>
 <p>Then build your website:</p>
 <p><img src="reference/figures/README-build.png"></p>
@@ -150,14 +149,7 @@
 </ul>
 </div>
 
-  <div class="dev-status">
-<h2>Dev status</h2>
-<ul class="list-unstyled">
-<li><a href="https://img.shields.io/badge/lifecycle-maturing-blue.svg"><img src="https://img.shields.io/badge/lifecycle-maturing-blue.svg" alt="Lifecycle: maturing"></a></li>
-<li><a href="https://github.com/Acribbs/siteymlgen/actions"><img src="https://github.com/Acribbs/siteymlgen/workflows/R-CMD-check/badge.svg" alt="R build status"></a></li>
-</ul>
-</div>
-</div>
+  </div>
 </div>
 
 
