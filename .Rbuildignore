@@ -9,3 +9,4 @@
 ^README.Rmd$
 ^codecov.yml$
 ^_site.yml$
+^CRAN-RELEASE$

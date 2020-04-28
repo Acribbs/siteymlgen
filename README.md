@@ -41,10 +41,16 @@ stick to the following naming convention:
 
 e.g. `A1_FileOne.Rmd`
 
-The capital first letter of the file name controls the position of the
-tab in the navbar. The number controls the position within the dropdown
-menu, if you do not want a dropdown menu then label the file
-\[A-Z\]1\_TitleofTab.Rmd.
+The capital first letter of the file name controls the layout position
+of the tab in the navbar. The number controls the position within the
+dropdown menu. If you would like a drop down tab menu then label your
+files:
+
+`B1_test1.Rmd`, `B2_test1.Rmd` and `B3_test1.Rmd`.
+
+This will render as:
+
+![](man/figures/README-tabs.png)
 
 # Example
 
