@@ -107,24 +107,23 @@
 <p>e.g. <code>A1_FileOne.Rmd</code></p>
 <p>The capital first letter of the file name controls the layout position of the tab in the navbar. The number controls the position within the dropdown menu. If you would like a drop down tab menu then label your files:</p>
 <p><code>B1_test1.Rmd</code>, <code>B2_test1.Rmd</code> and <code>B3_test1.Rmd</code>.</p>
-<p>This will render as:</p>
+<p>This will ultimately render as:</p>
 <p><img src="reference/figures/README-tabs.png"></p>
 </div>
 </div>
 <div id="example" class="section level1">
 <h1 class="hasAnchor">
 <a href="#example" class="anchor"></a>Example</h1>
-<p>R Markdown to generate a complete website and _site.yml controls the layout of this:</p>
-<p>Put your <code>.Rmd</code> files in a single directory. <code>index.Rmd</code> will become the home page.</p>
+<p>Included within this package is data that demonstrates the functionality of this project. First copy the data to a new folder:</p>
+<div class="sourceCode" id="cb3"><pre class="r"><span class="fu"><a href="https://rdrr.io/r/base/files2.html">dir.create</a></span>(<span class="fu"><a href="https://rdrr.io/r/base/paste.html">paste0</a></span>(<span class="fu"><a href="https://rdrr.io/r/base/getwd.html">getwd</a></span>(), <span class="st">"/test"</span>))
+<span class="fu"><a href="https://rdrr.io/r/base/files.html">file.copy</a></span>(<span class="fu"><a href="https://rdrr.io/r/base/system.file.html">system.file</a></span>(<span class="st">"extdata"</span>, <span class="kw">package</span><span class="kw">=</span><span class="st">"siteymlgen"</span>), <span class="fu"><a href="https://rdrr.io/r/base/paste.html">paste0</a></span>(<span class="fu"><a href="https://rdrr.io/r/base/getwd.html">getwd</a></span>(), <span class="st">"/test"</span>), <span class="kw">recursive</span> <span class="kw">=</span> <span class="fl">TRUE</span>)</pre></div>
+<p>Then naviage to the directory and create a new R project.</p>
+<p>All <code>.Rmd</code> files should be located within a single directory. <code>index.Rmd</code> will become the home page.</p>
 <p>Add an empty YAML file named <code>_site.yml</code>, which will be populated by siteymlgen according to your file names and input options supplied to <code><a href="reference/init.html">init()</a></code>.</p>
-<p>Next configure your build tools in Rstudio so that you can build websites:</p>
+<p>Set up build tools so that you can build an R markdown website and then “Build Website”:</p>
 <p><img src="reference/figures/README-configure.png"></p>
 <p>Then build your website:</p>
 <p><img src="reference/figures/README-build.png"></p>
-</div>
-<div id="documentation" class="section level1">
-<h1 class="hasAnchor">
-<a href="#documentation" class="anchor"></a>Documentation</h1>
 </div>
 
   </div>
