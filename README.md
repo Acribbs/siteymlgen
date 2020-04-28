@@ -4,9 +4,9 @@
 # siteymlgen: Automatically generate a \_site.yml for Rmarkdown websites
 
 <!-- badges: start -->
-
-<https://img.shields.io/badge/lifecycle-maturing-blue.svg> [![R build
-status](https://github.com/Acribbs/siteymlgen/workflows/R-CMD-check/badge.svg)](https://github.com/Acribbs/siteymlgen/actions)
+[![Lifecycle:
+maturing](https://img.shields.io/badge/lifecycle-maturing-blue.svg)](https://img.shields.io/badge/lifecycle-maturing-blue.svg)
+[![R build status](https://github.com/Acribbs/siteymlgen/workflows/R-CMD-check/badge.svg)](https://github.com/Acribbs/siteymlgen/actions)
 <!-- badges: end -->
 
 siteymlgen makes it easy to organise R Markdown website output. The
