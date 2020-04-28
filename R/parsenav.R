@@ -4,7 +4,7 @@
 # the prefixes to generate an automatic heirarchy that is then used to pass
 # to generate a yaml menu attribute
 siteymlgen_parsenav <- function(.yml, dir=NULL,
-                                navbar_title=NULL, type=NULL, left=NULL, right =NULL, ...){
+                                navbar_title=NULL, left=NULL, right =NULL, ...){
 
   # Enforce left is null if right is yes.
   if(length(is.na(right)) != 0){
@@ -57,6 +57,7 @@ siteymlgen_parsenav <- function(.yml, dir=NULL,
 
       # Need to state if the current matches previous and if it does add menu
       name <- stringr::str_extract(infile.replace, "\\S+")
+      name <- stringr::str_replace(name, "[A-Z][1-9]_", "")
 
       href_infile <- paste0(name, ".html", sep="")
 
@@ -66,6 +67,7 @@ siteymlgen_parsenav <- function(.yml, dir=NULL,
 
       # Need to make a list of navbar_page for menu
       name <- stringr::str_extract(infile.replace, "\\S+")
+      name <- stringr::str_replace(name, "[A-Z][1-9]_", "")
 
       href_infile <- paste0(name, ".html", sep="")
 

@@ -13,7 +13,7 @@ knitr::opts_chunk$set(
 # siteymlgen: Automatically generate a _site.yml for Rmarkdown websites
 
 <!-- badges: start -->
-[![Lifecycle: maturing](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://www.tidyverse.org/lifecycle/#experimental)
+[![Lifecycle: maturing](https://img.shields.io/badge/lifecycle-maturing-blue.svg)](https://img.shields.io/badge/lifecycle-maturing-blue.svg)
 [![R build status](https://github.com/Acribbs/siteymlgen/workflows/R-CMD-check/badge.svg)](https://github.com/Acribbs/siteymlgen/actions)
 <!-- badges: end -->
 
@@ -74,7 +74,7 @@ Then naviage to the directory and create a new R project.
 All `.Rmd` files should be located within a single directory. `index.Rmd` will become the home page.
 
 Add an empty YAML file named `_site.yml`, which will be populated by siteymlgen according to your file names and input options supplied to `init()`.
-
+?pkgdown::build_site()
 Set up build tools so that you can build an R markdown
 website and then "Build Website":
 

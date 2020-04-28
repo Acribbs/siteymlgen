@@ -5,9 +5,7 @@
 
 <!-- badges: start -->
 
-[![Lifecycle:
-maturing](https://img.shields.io/badge/lifecycle-maturing-blue.svg)](https://img.shields.io/badge/lifecycle-maturing-blue.svg)
-[![R build
+<https://img.shields.io/badge/lifecycle-maturing-blue.svg> [![R build
 status](https://github.com/Acribbs/siteymlgen/workflows/R-CMD-check/badge.svg)](https://github.com/Acribbs/siteymlgen/actions)
 <!-- badges: end -->
 
@@ -69,10 +67,8 @@ All `.Rmd` files should be located within a single directory.
 
 Add an empty YAML file named `_site.yml`, which will be populated by
 siteymlgen according to your file names and input options supplied to
-`init()`.
-
-Set up build tools so that you can build an R markdown website and then
-“Build Website”:
+`init()`. ?pkgdown::build\_site() Set up build tools so that you can
+build an R markdown website and then “Build Website”:
 
 ![](man/figures/README-configure.png)
 
