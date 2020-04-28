@@ -48,29 +48,34 @@ files:
 
 `B1_test1.Rmd`, `B2_test1.Rmd` and `B3_test1.Rmd`.
 
-This will render as:
+This will ultimately render as:
 
 ![](man/figures/README-tabs.png)
 
 # Example
 
-R Markdown to generate a complete website and \_site.yml controls the
-layout of this:
+Included within this package is data that demonstrates the functionality
+of this project. First copy the data to a new folder:
 
-Put your `.Rmd` files in a single directory. `index.Rmd` will become the
-home page.
+``` r
+dir.create(paste0(getwd(), "/test"))
+file.copy(system.file("extdata", package="siteymlgen"), paste0(getwd(), "/test"), recursive = TRUE)
+```
+
+Then naviage to the directory and create a new R project.
+
+All `.Rmd` files should be located within a single directory.
+`index.Rmd` will become the home page.
 
 Add an empty YAML file named `_site.yml`, which will be populated by
 siteymlgen according to your file names and input options supplied to
 `init()`.
 
-Next configure your build tools in Rstudio so that you can build
-websites:
+Set up build tools so that you can build an R markdown website and then
+“Build Website”:
 
 ![](man/figures/README-configure.png)
 
 Then build your website:
 
 ![](man/figures/README-build.png)
-
-# Documentation
