@@ -30,7 +30,6 @@ Imports:
 	  rmarkdown,
 	  rlist,
 	  purrr,
-	  tidyverse
 Suggests: 
     knitr,
     testthat,

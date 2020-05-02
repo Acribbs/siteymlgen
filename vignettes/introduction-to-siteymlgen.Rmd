@@ -28,7 +28,7 @@ knitr::opts_chunk$set(
   collapse = TRUE,
   comment = ""
 )
-library(tidyverse)
+library(magrittr)
 ```
 
 ```{r pandoc_check, echo=FALSE}
@@ -74,7 +74,7 @@ file named `_site.yml` into a repository and then add the following into the `in
 
 ```{r echo=TRUE, eval=FALSE}
 library(siteymlgen)
-init()
+init(file="_site.yml")
 ```
 
 You can specify values to modify the basic yaml output. For a full range of input variables please
@@ -88,7 +88,8 @@ init(authors = c("Adam","Paul"),
      title = "hello", 
      categories=c("r", "reprodicibility"), 
      toc=TRUE, 
-     toc_depth = 3)
+     toc_depth = 3,
+     file="_site.yml")
 ```
 
 When you build your website within Rstudio the `init` function will parse the directory of `.Rmd` 
