@@ -41,6 +41,7 @@
 #'   defaults to FALSE.
 #' @param theme An Rmarkdown theme to set the render output. Defaults to 'united'.
 #' @param css Specify custom css.
+#' @param file Specify the output filename. Default to tempfile.
 #' @importFrom magrittr %>%
 #' @return A _site.yml file populated with yaml code.
 #' @examples
@@ -53,10 +54,10 @@ init <- function(authors="author", date=lubridate::today(),
                  navbar_title="Title", title="siteymlgen", categories=NULL,
                  name=NULL, output_dir=NULL, include=NULL,
                  exclude=NULL, toc=FALSE, toc_depth=NULL, toc_title= NULL, toc_float=FALSE,
-                 theme="united", highlight=NULL, css=NULL){
+                 theme="united", highlight=NULL, css=NULL, file=tempfile()){
 
-  # Create a _site.yml file
-  file.create("_site.yml")
+  # Create a file
+  file.create(file)
 
   features <- siteymlgen_toplevel(authors=authors,
                                   date=as.character(date),
@@ -85,9 +86,7 @@ init <- function(authors="author", date=lubridate::today(),
                  parseenv,
                  output)
 
-  yaml::write_yaml(yml_final, file="_site.yml")
-
-
+  yaml::write_yaml(yml_final, file=file)
 }
 
 

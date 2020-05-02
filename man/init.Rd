@@ -24,7 +24,8 @@ init(
   toc_float = FALSE,
   theme = "united",
   highlight = NULL,
-  css = NULL
+  css = NULL,
+  file = tempfile()
 )
 }
 \arguments{
@@ -85,6 +86,8 @@ Supported styles include "default",
 and "textmate". Pass NULL to prevent syntax highlighting}
 
 \item{css}{Specify custom css.}
+
+\item{file}{Specify the output filename. Default to tempfile.}
 }
 \value{
 A _site.yml file populated with yaml code.

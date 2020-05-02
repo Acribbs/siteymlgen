@@ -20,7 +20,6 @@ LazyData: true
 Depends:
     R (>= 3.2)
 Imports:
-    data.table (>= 1.9.4),
 	  dplyr,
 	  ymlthis,
 	  magrittr,
@@ -29,8 +28,7 @@ Imports:
 	  lubridate,
 	  rmarkdown,
 	  rlist,
-	  purrr,
-	  tidyverse
+	  purrr
 Suggests: 
     knitr,
     testthat,
