@@ -82,7 +82,7 @@
       <h1 data-toc-skip>Automating rmakrdown html output</h1>
                         <h4 class="author">Adam P Cribbs</h4>
             
-            <h4 class="date">04/28/2020</h4>
+            <h4 class="date">05/04/2020</h4>
       
       <small class="dont-index">Source: <a href="https://github.com/Acribbs/siteymlgen/blob/master/vignettes/introduction-to-siteymlgen.Rmd"><code>vignettes/introduction-to-siteymlgen.Rmd</code></a></small>
       <div class="hidden name"><code>introduction-to-siteymlgen.Rmd</code></div>
@@ -115,7 +115,7 @@
 </h1>
 <p>Generating an <code>_site.yml</code> file is made as painless as possible. The first step is to add a file named <code>_site.yml</code> into a repository and then add the following into the <code>index.Rmd</code> file:</p>
 <div class="sourceCode" id="cb2"><html><body><pre class="r"><span class="fu"><a href="https://rdrr.io/r/base/library.html">library</a></span>(<span class="no">siteymlgen</span>)
-<span class="fu"><a href="../reference/init.html">init</a></span>()</pre></body></html></div>
+<span class="fu"><a href="../reference/init.html">init</a></span>(<span class="kw">file</span><span class="kw">=</span><span class="st">"_site.yml"</span>)</pre></body></html></div>
 <p>You can specify values to modify the basic yaml output. For a full range of input variables please refer to the <code><a href="../reference/init.html">?init</a></code> help section :</p>
 <div class="sourceCode" id="cb3"><html><body><pre class="r"><span class="fu"><a href="../reference/init.html">init</a></span>(<span class="kw">authors</span> <span class="kw">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span>(<span class="st">"Adam"</span>,<span class="st">"Paul"</span>),
      <span class="kw">left</span><span class="kw">=</span><span class="st">"yes"</span>,
@@ -124,7 +124,8 @@
      <span class="kw">title</span> <span class="kw">=</span> <span class="st">"hello"</span>,
      <span class="kw">categories</span><span class="kw">=</span><span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span>(<span class="st">"r"</span>, <span class="st">"reprodicibility"</span>),
      <span class="kw">toc</span><span class="kw">=</span><span class="fl">TRUE</span>,
-     <span class="kw">toc_depth</span> <span class="kw">=</span> <span class="fl">3</span>)</pre></body></html></div>
+     <span class="kw">toc_depth</span> <span class="kw">=</span> <span class="fl">3</span>,
+     <span class="kw">file</span><span class="kw">=</span><span class="st">"_site.yml"</span>)</pre></body></html></div>
 <p>When you build your website within Rstudio the <code>init</code> function will parse the directory of <code>.Rmd</code> files and then arrange them into a navbar. The order in which the <code>.Rmd</code> files are displayed within your website can be controlled by following our naming convention below.</p>
 </div>
 <div id="siteymlgen-rmarkdown-naming-convention" class="section level1">

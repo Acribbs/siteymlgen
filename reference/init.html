@@ -151,7 +151,8 @@ generation.</p>
   <span class='kw'>toc_float</span> <span class='kw'>=</span> <span class='fl'>FALSE</span>,
   <span class='kw'>theme</span> <span class='kw'>=</span> <span class='st'>"united"</span>,
   <span class='kw'>highlight</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
-  <span class='kw'>css</span> <span class='kw'>=</span> <span class='kw'>NULL</span>
+  <span class='kw'>css</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
+  <span class='kw'>file</span> <span class='kw'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/tempfile.html'>tempfile</a></span>()
 )</pre>
 
     <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
@@ -254,6 +255,10 @@ and "textmate". Pass NULL to prevent syntax highlighting</p></td>
     <tr>
       <th>css</th>
       <td><p>Specify custom css.</p></td>
+    </tr>
+    <tr>
+      <th>file</th>
+      <td><p>Specify the output filename. Default to tempfile.</p></td>
     </tr>
     </table>
 
