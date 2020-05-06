@@ -5,13 +5,13 @@
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Automating rmakrdown html output • siteymlgen</title>
+<title>Automating 'R Makrdown' html output • siteymlgen</title>
 <!-- jquery --><script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script><!-- Bootstrap --><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha256-bZLfwXAP04zRMK2BjiO8iu9pf4FbLqX6zitd+tIvLhE=" crossorigin="anonymous">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha256-nuL8/2cJ5NDSSwnKD8VqreErSWHtnEP9E7AySL+1ev4=" crossorigin="anonymous"></script><!-- bootstrap-toc --><link rel="stylesheet" href="../bootstrap-toc.css">
 <script src="../bootstrap-toc.js"></script><!-- Font Awesome icons --><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css" integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk=" crossorigin="anonymous">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/v4-shims.min.css" integrity="sha256-wZjR52fzng1pJHwx4aV2AO3yyTOXrcDW7jBpJtTwVxw=" crossorigin="anonymous">
 <!-- clipboard.js --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><!-- headroom.js --><script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/headroom.min.js" integrity="sha256-AsUX4SJE1+yuDu5+mAVzJbuYNPHj/WroHuZ8Ir/CkE0=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/jQuery.headroom.min.js" integrity="sha256-ZX/yNShbjqsohH1k95liqY9Gd8uOiE1S4vZc+9KQ1K4=" crossorigin="anonymous"></script><!-- pkgdown --><link href="../pkgdown.css" rel="stylesheet">
-<script src="../pkgdown.js"></script><meta property="og:title" content="Automating rmakrdown html output">
+<script src="../pkgdown.js"></script><meta property="og:title" content="Automating 'R Makrdown' html output">
 <meta property="og:description" content="siteymlgen">
 <!-- mathjax --><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js" integrity="sha256-nvJJv9wWKEm88qvoQl9ekL2J+k/RWIsaSScxxlsrv8k=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/config/TeX-AMS-MML_HTMLorMML.js" integrity="sha256-84DKXVJXs0/F8OTMzX4UR909+jtl4G7SPypPavF+GfA=" crossorigin="anonymous"></script><!--[if lt IE 9]>
 <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
@@ -54,7 +54,7 @@
   </a>
   <ul class="dropdown-menu" role="menu">
 <li>
-      <a href="../articles/introduction-to-siteymlgen.html">Automating rmakrdown html output</a>
+      <a href="../articles/introduction-to-siteymlgen.html">Automating 'R Makrdown' html output</a>
     </li>
   </ul>
 </li>
@@ -79,10 +79,10 @@
       </header><script src="introduction-to-siteymlgen_files/header-attrs-2.1/header-attrs.js"></script><div class="row">
   <div class="col-md-9 contents">
     <div class="page-header toc-ignore">
-      <h1 data-toc-skip>Automating rmakrdown html output</h1>
+      <h1 data-toc-skip>Automating ‘R Makrdown’ html output</h1>
                         <h4 class="author">Adam P Cribbs</h4>
             
-            <h4 class="date">04/28/2020</h4>
+            <h4 class="date">05/06/2020</h4>
       
       <small class="dont-index">Source: <a href="https://github.com/Acribbs/siteymlgen/blob/master/vignettes/introduction-to-siteymlgen.Rmd"><code>vignettes/introduction-to-siteymlgen.Rmd</code></a></small>
       <div class="hidden name"><code>introduction-to-siteymlgen.Rmd</code></div>
@@ -92,7 +92,7 @@
     
         <div class="abstract">
       <p class="abstract">Abstract</p>
-      <p>siteymlgen makes it easy to organise R Markdown website output. The init() function placed within the first code chunk of the index.Rmd file of an R project directory will initiate the generation of an automatically written _site.yml file. siteymlgen recomends a specific naming convention for your markdown files. This naming will ensure that your navbar layout is ordered according to a heirarchy. siteymlgen package version: 1.0.0</p>
+      <p>siteymlgen makes it easy to organise ‘R Markdown’ website output. The init() function placed within the first code chunk of the index.Rmd file of an ‘R’ project directory will initiate the generation of an automatically written _site.yml file. ‘siteymlgen’ recomends a specific naming convention for your ‘R Markdown’ files. This naming will ensure that your navbar layout is ordered according to a heirarchy. ‘siteymlgen’ package version: 1.0.0</p>
     </div>
     
 <div id="overview" class="section level1">
@@ -115,7 +115,7 @@
 </h1>
 <p>Generating an <code>_site.yml</code> file is made as painless as possible. The first step is to add a file named <code>_site.yml</code> into a repository and then add the following into the <code>index.Rmd</code> file:</p>
 <div class="sourceCode" id="cb2"><html><body><pre class="r"><span class="fu"><a href="https://rdrr.io/r/base/library.html">library</a></span>(<span class="no">siteymlgen</span>)
-<span class="fu"><a href="../reference/init.html">init</a></span>()</pre></body></html></div>
+<span class="fu"><a href="../reference/init.html">init</a></span>(<span class="kw">file</span><span class="kw">=</span><span class="st">"_site.yml"</span>)</pre></body></html></div>
 <p>You can specify values to modify the basic yaml output. For a full range of input variables please refer to the <code><a href="../reference/init.html">?init</a></code> help section :</p>
 <div class="sourceCode" id="cb3"><html><body><pre class="r"><span class="fu"><a href="../reference/init.html">init</a></span>(<span class="kw">authors</span> <span class="kw">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span>(<span class="st">"Adam"</span>,<span class="st">"Paul"</span>),
      <span class="kw">left</span><span class="kw">=</span><span class="st">"yes"</span>,
@@ -124,7 +124,8 @@
      <span class="kw">title</span> <span class="kw">=</span> <span class="st">"hello"</span>,
      <span class="kw">categories</span><span class="kw">=</span><span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span>(<span class="st">"r"</span>, <span class="st">"reprodicibility"</span>),
      <span class="kw">toc</span><span class="kw">=</span><span class="fl">TRUE</span>,
-     <span class="kw">toc_depth</span> <span class="kw">=</span> <span class="fl">3</span>)</pre></body></html></div>
+     <span class="kw">toc_depth</span> <span class="kw">=</span> <span class="fl">3</span>,
+     <span class="kw">file</span><span class="kw">=</span><span class="st">"_site.yml"</span>)</pre></body></html></div>
 <p>When you build your website within Rstudio the <code>init</code> function will parse the directory of <code>.Rmd</code> files and then arrange them into a navbar. The order in which the <code>.Rmd</code> files are displayed within your website can be controlled by following our naming convention below.</p>
 </div>
 <div id="siteymlgen-rmarkdown-naming-convention" class="section level1">

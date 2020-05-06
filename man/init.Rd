@@ -99,5 +99,5 @@ generation.
 \examples{
 init(authors = c("Adam","Paul"), left="yes",
 navbar_title = "Main title", title = "hello",
-categories=c("r", "reprodicibility"), file="_site.yml")
+categories=c("r", "reprodicibility"), file=tempdir())
 }

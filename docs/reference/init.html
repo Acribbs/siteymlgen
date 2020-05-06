@@ -96,7 +96,7 @@ generation." />
   </a>
   <ul class="dropdown-menu" role="menu">
     <li>
-      <a href="../articles/introduction-to-siteymlgen.html">Automating rmakrdown html output</a>
+      <a href="../articles/introduction-to-siteymlgen.html">Automating 'R Makrdown' html output</a>
     </li>
   </ul>
 </li>
@@ -135,7 +135,7 @@ generation.</p>
   <span class='kw'>authors</span> <span class='kw'>=</span> <span class='st'>"author"</span>,
   <span class='kw'>date</span> <span class='kw'>=</span> <span class='kw pkg'>lubridate</span><span class='kw ns'>::</span><span class='fu'><a href='http://lubridate.tidyverse.org/reference/now.html'>today</a></span>(),
   <span class='kw'>affiliation</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
-  <span class='kw'>dir</span> <span class='kw'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/getwd.html'>getwd</a></span>(),
+  <span class='kw'>dir</span> <span class='kw'>=</span> <span class='st'>"."</span>,
   <span class='kw'>left</span> <span class='kw'>=</span> <span class='st'>"yes"</span>,
   <span class='kw'>right</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
   <span class='kw'>navbar_title</span> <span class='kw'>=</span> <span class='st'>"Title"</span>,
@@ -151,7 +151,8 @@ generation.</p>
   <span class='kw'>toc_float</span> <span class='kw'>=</span> <span class='fl'>FALSE</span>,
   <span class='kw'>theme</span> <span class='kw'>=</span> <span class='st'>"united"</span>,
   <span class='kw'>highlight</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
-  <span class='kw'>css</span> <span class='kw'>=</span> <span class='kw'>NULL</span>
+  <span class='kw'>css</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
+  <span class='kw'>file</span> <span class='kw'>=</span> <span class='kw'>NULL</span>
 )</pre>
 
     <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
@@ -255,6 +256,10 @@ and "textmate". Pass NULL to prevent syntax highlighting</p></td>
       <th>css</th>
       <td><p>Specify custom css.</p></td>
     </tr>
+    <tr>
+      <th>file</th>
+      <td><p>Specify the output filename.</p></td>
+    </tr>
     </table>
 
     <h2 class="hasAnchor" id="value"><a class="anchor" href="#value"></a>Value</h2>
@@ -264,7 +269,7 @@ and "textmate". Pass NULL to prevent syntax highlighting</p></td>
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
     <pre class="examples"><div class='input'><span class='fu'>init</span>(<span class='kw'>authors</span> <span class='kw'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='st'>"Adam"</span>,<span class='st'>"Paul"</span>), <span class='kw'>left</span><span class='kw'>=</span><span class='st'>"yes"</span>,
 <span class='kw'>navbar_title</span> <span class='kw'>=</span> <span class='st'>"Main title"</span>, <span class='kw'>title</span> <span class='kw'>=</span> <span class='st'>"hello"</span>,
-<span class='kw'>categories</span><span class='kw'>=</span><span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='st'>"r"</span>, <span class='st'>"reprodicibility"</span>))</div></pre>
+<span class='kw'>categories</span><span class='kw'>=</span><span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='st'>"r"</span>, <span class='st'>"reprodicibility"</span>), <span class='kw'>file</span><span class='kw'>=</span><span class='st'>"_site.yml"</span>)</div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
     <nav id="toc" data-toggle="toc" class="sticky-top">

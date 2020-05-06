@@ -47,7 +47,7 @@
 #' @examples
 #' init(authors = c("Adam","Paul"), left="yes",
 #' navbar_title = "Main title", title = "hello",
-#' categories=c("r", "reprodicibility"), file="_site.yml")
+#' categories=c("r", "reprodicibility"))
 #' @export
 init <- function(authors="author", date=lubridate::today(),
                  affiliation=NULL, dir=".", left="yes", right=NULL,
@@ -93,7 +93,10 @@ init <- function(authors="author", date=lubridate::today(),
 
   # File is written only when user specifies file input
   if(length(is.na(file)) != 0){
-    yaml::write_yaml(yml_final, file=file)}
+    #yaml::write_yaml(yml_final, file=file)}else{
+      warning("No file variable has been specified. Please specify one.
+      Typically init(file='_site.yml')", call. = FALSE)
+    }
 
 }
 
