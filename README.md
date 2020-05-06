@@ -1,7 +1,7 @@
+siteymlgen - Automatically generate a \_site.yml for Rmarkdown websites
+================
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
-
-# siteymlgen: Automatically generate a \_site.yml for Rmarkdown websites
 
 <!-- badges: start -->
 
