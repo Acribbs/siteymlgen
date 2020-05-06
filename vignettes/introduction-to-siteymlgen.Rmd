@@ -1,15 +1,15 @@
 ---
-title: "Automating rmakrdown html output"
+title: "Automating 'R Makrdown' html output"
 author: "Adam P Cribbs"
 date: "`r format(Sys.Date(), '%m/%d/%Y')`"
 abstract: >
-  siteymlgen makes it easy to organise R Markdown website output. 
+  siteymlgen makes it easy to organise 'R Markdown' website output. 
   The init() function placed within the first code chunk of the index.Rmd
-  file of an R project directory will initiate the generation of an automatically 
-  written _site.yml file. siteymlgen recomends a specific naming
-  convention for your markdown files. This naming will ensure that
+  file of an 'R' project directory will initiate the generation of an automatically 
+  written _site.yml file. 'siteymlgen' recomends a specific naming
+  convention for your 'R Markdown' files. This naming will ensure that
   your navbar layout is ordered according to a heirarchy.  
-  siteymlgen package version: `r packageVersion("siteymlgen")`
+  'siteymlgen' package version: `r packageVersion("siteymlgen")`
 output:
   rmarkdown::html_document:
     highlight: pygments

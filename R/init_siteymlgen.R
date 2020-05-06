@@ -41,23 +41,28 @@
 #'   defaults to FALSE.
 #' @param theme An Rmarkdown theme to set the render output. Defaults to 'united'.
 #' @param css Specify custom css.
-#' @param file Specify the output filename. Default to tempfile.
+#' @param file Specify the output filename.
 #' @importFrom magrittr %>%
 #' @return A _site.yml file populated with yaml code.
 #' @examples
 #' init(authors = c("Adam","Paul"), left="yes",
 #' navbar_title = "Main title", title = "hello",
-#' categories=c("r", "reprodicibility"))
+#' categories=c("r", "reprodicibility"), file="_site.yml")
 #' @export
 init <- function(authors="author", date=lubridate::today(),
-                 affiliation=NULL, dir=getwd(), left="yes", right=NULL,
+                 affiliation=NULL, dir=".", left="yes", right=NULL,
                  navbar_title="Title", title="siteymlgen", categories=NULL,
                  name=NULL, output_dir=NULL, include=NULL,
                  exclude=NULL, toc=FALSE, toc_depth=NULL, toc_title= NULL, toc_float=FALSE,
-                 theme="united", highlight=NULL, css=NULL, file=tempfile()){
+                 theme="united", highlight=NULL, css=NULL, file=NULL{
 
   # Create a file
-  file.create(file)
+  if(length(is.na(file)) != 0){
+    file.create(file)}else{
+      warning("No file variable has been specified. Please specify one.
+      Typically init(file='_site.yml')", call. = FALSE)
+    }
+
 
   features <- siteymlgen_toplevel(authors=authors,
                                   date=as.character(date),
@@ -86,7 +91,10 @@ init <- function(authors="author", date=lubridate::today(),
                  parseenv,
                  output)
 
-  yaml::write_yaml(yml_final, file=file)
+  # File is written only when user specifies file input
+  if(length(is.na(file)) != 0){
+    yaml::write_yaml(yml_final, file=file)}
+
 }
 
 
