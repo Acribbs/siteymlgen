@@ -54,7 +54,7 @@ init <- function(authors="author", date=lubridate::today(),
                  navbar_title="Title", title="siteymlgen", categories=NULL,
                  name=NULL, output_dir=NULL, include=NULL,
                  exclude=NULL, toc=FALSE, toc_depth=NULL, toc_title= NULL, toc_float=FALSE,
-                 theme="united", highlight=NULL, css=NULL, file=NULL{
+                 theme="united", highlight=NULL, css=NULL, file=NULL){
 
   # Create a file
   if(length(is.na(file)) != 0){

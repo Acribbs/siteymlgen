@@ -8,7 +8,7 @@ init(
   authors = "author",
   date = lubridate::today(),
   affiliation = NULL,
-  dir = getwd(),
+  dir = ".",
   left = "yes",
   right = NULL,
   navbar_title = "Title",
@@ -25,7 +25,7 @@ init(
   theme = "united",
   highlight = NULL,
   css = NULL,
-  file = tempfile()
+  file = NULL
 )
 }
 \arguments{
@@ -87,7 +87,7 @@ and "textmate". Pass NULL to prevent syntax highlighting}
 
 \item{css}{Specify custom css.}
 
-\item{file}{Specify the output filename. Default to tempfile.}
+\item{file}{Specify the output filename.}
 }
 \value{
 A _site.yml file populated with yaml code.
@@ -99,5 +99,5 @@ generation.
 \examples{
 init(authors = c("Adam","Paul"), left="yes",
 navbar_title = "Main title", title = "hello",
-categories=c("r", "reprodicibility"))
+categories=c("r", "reprodicibility"), file="_site.yml")
 }
