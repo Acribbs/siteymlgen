@@ -2,14 +2,6 @@
 title: "Automating 'R Makrdown' html output"
 author: "Adam P Cribbs"
 date: "`r format(Sys.Date(), '%m/%d/%Y')`"
-abstract: >
-  siteymlgen makes it easy to organise 'R Markdown' website output. 
-  The init() function placed within the first code chunk of the index.Rmd
-  file of an 'R' project directory will initiate the generation of an automatically 
-  written _site.yml file. 'siteymlgen' recomends a specific naming
-  convention for your 'R Markdown' files. This naming will ensure that
-  your navbar layout is ordered according to a heirarchy.  
-  'siteymlgen' package version: `r packageVersion("siteymlgen")`
 output:
   rmarkdown::html_document:
     highlight: pygments
@@ -40,8 +32,14 @@ if (!rmarkdown::pandoc_available()) {
 
 # Overview
 
-**sitegenyml** is a package to automate the generation of _site.yml file for building 
-Rmarkdown websites. Often writing the _site.yml can be the most annoying task when 
+siteymlgen makes it easy to organise 'R Markdown' website output. 
+  The init() function placed within the first code chunk of the index.Rmd
+  file of an 'R' project directory will initiate the generation of an automatically 
+  written _site.yml file. 'siteymlgen' recomends a specific naming
+  convention for your 'R Markdown' files. This naming will ensure that
+  your navbar layout is ordered according to a heirarchy. 
+
+Often writing the _site.yml can be the most annoying task when 
 generating a webite using Rmarkdown, particularly when there are multiple tabs and 
 sub tabs. The `init()` function should be placed in a code cell of your index.Rmd 
 file. When your other `.Rmd` files are named according to the siteymlgen convention 
