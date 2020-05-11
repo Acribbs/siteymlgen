@@ -20,9 +20,10 @@ your navbar layout is ordered according to a heirarchy.
 
 ## Installation
 
-You can install siteymlgen …:
+You can install siteymlgen using CRAN:
 
 ``` r
+install.package('siteymlgen')
 ```
 
 Or you can install the development version of siteymlgen from GitHub
