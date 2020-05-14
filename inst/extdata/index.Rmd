@@ -6,5 +6,5 @@ output: html_document
 ```{r setup, include=FALSE}
 devtools::reload()
 library(siteymlgen)
-siteymlgen::init(authors = c("Adam","Paul"), left="yes", dir="~/Documents/siteymlgen/inst/extdata/", navbar_title = "Main title", title = "hello", categories=c("r", "reprodicibility"), toc=TRUE, toc_depth = 3)
+siteymlgen::init(authors = c("Adam","Paul"), left="yes", dir="~/Documents/siteymlgen/inst/extdata/", navbar_title = "Main title", title = "hello", categories=c("r", "reprodicibility"), toc=TRUE, toc_depth = 3, file="_site.yml")
 ```

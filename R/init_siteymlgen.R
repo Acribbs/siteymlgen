@@ -93,7 +93,7 @@ init <- function(authors="author", date=lubridate::today(),
 
   # File is written only when user specifies file input
   if(length(is.na(file)) != 0){
-    #yaml::write_yaml(yml_final, file=file)}else{
+    yaml::write_yaml(yml_final, file=file)}else{
       warning("No file variable has been specified. Please specify one.
       Typically init(file='_site.yml')", call. = FALSE)
     }
