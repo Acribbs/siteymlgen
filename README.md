@@ -24,7 +24,7 @@ your navbar layout is ordered according to a heirarchy.
 You can install siteymlgen using CRAN:
 
 ``` r
-install.package('siteymlgen')
+install.packages('siteymlgen')
 ```
 
 Or you can install the development version of siteymlgen from GitHub
