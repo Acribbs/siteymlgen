@@ -27,6 +27,10 @@ jobs:
           key: macOS-r-3.6-${{ hashFiles('.github/depends.Rds') }}
           restore-keys: macOS-r-3.6-
 
+      - name: Install XQuartz on macOS
+        if: runner.os == 'macOS'
+        run: brew install xquartz --cask
+        
       - name: Install dependencies
         run: |
           install.packages("remotes")
