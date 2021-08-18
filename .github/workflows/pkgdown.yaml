@@ -35,9 +35,6 @@ jobs:
         
       - name: Install dependencies
         run: |
-          Sys.getenv("GITHUB_PAT")
-          Sys.unsetenv("GITHUB_PAT")
-          Sys.getenv("GITHUB_PAT")
           install.packages("remotes")
           update.packages(checkBuilt = TRUE, ask = FALSE)
           remotes::install_deps(dependencies = TRUE)
