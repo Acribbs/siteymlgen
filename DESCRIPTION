@@ -35,7 +35,8 @@ Suggests:
     testthat,
     spelling,
     pkgdown,
-    roxygen2 (>= 7.0.0)
+    roxygen2 (>= 7.0.0),
+    markdown
 VignetteBuilder: knitr
 Encoding: UTF-8
 Language: en-GB
