@@ -25,6 +25,8 @@
 <![endif]-->
 </head>
 <body data-spy="scroll" data-target="#toc">
+    
+
     <div class="container template-home">
       <header><div class="navbar navbar-default navbar-fixed-top" role="navigation">
   <div class="container">
@@ -43,12 +45,6 @@
 
     <div id="navbar" class="navbar-collapse collapse">
       <ul class="nav navbar-nav">
-<li>
-  <a href="index.html">
-    <span class="fas fa fas fa-home fa-lg"></span>
-     
-  </a>
-</li>
 <li>
   <a href="reference/index.html">Reference</a>
 </li>
@@ -71,7 +67,7 @@
 <ul class="nav navbar-nav navbar-right">
 <li>
   <a href="https://github.com/Acribbs/siteymlgen/">
-    <span class="fab fa fab fa-github fa-lg"></span>
+    <span class="fab fa-github fa-lg"></span>
      
   </a>
 </li>
@@ -90,22 +86,24 @@
 
 <div id="siteymlgen---automatically-generate-a-_siteyml-for-rmarkdown-websites" class="section level1">
 <div class="page-header"><h1 class="hasAnchor">
-<a href="#siteymlgen---automatically-generate-a-_siteyml-for-rmarkdown-websites" class="anchor"></a>siteymlgen - Automatically generate a _site.yml for Rmarkdown websites</h1></div>
+<a href="#siteymlgen---automatically-generate-a-_siteyml-for-rmarkdown-websites" class="anchor" aria-hidden="true"></a>siteymlgen - Automatically generate a _site.yml for Rmarkdown websites</h1></div>
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 <!-- badges: start -->
 
 <p>siteymlgen makes it easy to organise R Markdown website output. The init() function placed within the first code chunk of the index.Rmd file of an R project directory will initiate the generation of an automatically written _site.yml file. siteymlgen recomends a specific naming convention for your markdown files. This naming will ensure that your navbar layout is ordered according to a heirarchy.</p>
 <div id="installation" class="section level2">
 <h2 class="hasAnchor">
-<a href="#installation" class="anchor"></a>Installation</h2>
+<a href="#installation" class="anchor" aria-hidden="true"></a>Installation</h2>
 <p>You can install siteymlgen using CRAN:</p>
-<div class="sourceCode" id="cb1"><pre class="r"><span class="fu">install.package</span>(<span class="st">'siteymlgen'</span>)</pre></div>
+<div class="sourceCode" id="cb1"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="fu"><a href="https://rdrr.io/r/utils/install.packages.html" class="external-link">install.packages</a></span><span class="op">(</span><span class="st">'siteymlgen'</span><span class="op">)</span></code></pre></div>
 <p>Or you can install the development version of siteymlgen from GitHub with:</p>
-<div class="sourceCode" id="cb2"><pre class="r"><span class="kw pkg">devtools</span><span class="kw ns">::</span><span class="fu">install_github</span>(<span class="st">"Acribbs/siteymlgen"</span>)</pre></div>
+<div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="fu">devtools</span><span class="fu">::</span><span class="fu">install_github</span><span class="op">(</span><span class="st">"Acribbs/siteymlgen"</span><span class="op">)</span></code></pre></div>
 </div>
 <div id="naming-convention" class="section level2">
 <h2 class="hasAnchor">
-<a href="#naming-convention" class="anchor"></a>Naming convention</h2>
+<a href="#naming-convention" class="anchor" aria-hidden="true"></a>Naming convention</h2>
 <p>In order to control how your website navbar is ordered then you need to stick to the following naming convention:</p>
 <p><code>[A-Z][1-9]_TitleofTab.Rmd</code></p>
 <p>e.g. <code>A1_FileOne.Rmd</code></p>
@@ -117,10 +115,11 @@
 </div>
 <div id="example" class="section level1">
 <h1 class="hasAnchor">
-<a href="#example" class="anchor"></a>Example</h1>
+<a href="#example" class="anchor" aria-hidden="true"></a>Example</h1>
 <p>Included within this package is data that demonstrates the functionality of this project. First copy the data to a new folder:</p>
-<div class="sourceCode" id="cb3"><pre class="r"><span class="fu"><a href="https://rdrr.io/r/base/files2.html">dir.create</a></span>(<span class="fu"><a href="https://rdrr.io/r/base/paste.html">paste0</a></span>(<span class="fu"><a href="https://rdrr.io/r/base/getwd.html">getwd</a></span>(), <span class="st">"/test"</span>))
-<span class="fu"><a href="https://rdrr.io/r/base/files.html">file.copy</a></span>(<span class="fu"><a href="https://rdrr.io/r/base/system.file.html">system.file</a></span>(<span class="st">"extdata"</span>, <span class="kw">package</span><span class="kw">=</span><span class="st">"siteymlgen"</span>), <span class="fu"><a href="https://rdrr.io/r/base/paste.html">paste0</a></span>(<span class="fu"><a href="https://rdrr.io/r/base/getwd.html">getwd</a></span>(), <span class="st">"/test"</span>), <span class="kw">recursive</span> <span class="kw">=</span> <span class="fl">TRUE</span>)</pre></div>
+<div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="fu"><a href="https://rdrr.io/r/base/files2.html" class="external-link">dir.create</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/paste.html" class="external-link">paste0</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/getwd.html" class="external-link">getwd</a></span><span class="op">(</span><span class="op">)</span>, <span class="st">"/test"</span><span class="op">)</span><span class="op">)</span>
+<span class="fu"><a href="https://rdrr.io/r/base/files.html" class="external-link">file.copy</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/system.file.html" class="external-link">system.file</a></span><span class="op">(</span><span class="st">"extdata"</span>, package<span class="op">=</span><span class="st">"siteymlgen"</span><span class="op">)</span>, <span class="fu"><a href="https://rdrr.io/r/base/paste.html" class="external-link">paste0</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/getwd.html" class="external-link">getwd</a></span><span class="op">(</span><span class="op">)</span>, <span class="st">"/test"</span><span class="op">)</span>, recursive <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span></code></pre></div>
 <p>Then naviage to the directory and create a new R project.</p>
 <p>All <code>.Rmd</code> files should be located within a single directory. <code>index.Rmd</code> will become the home page.</p>
 <p>Add an empty YAML file named <code>_site.yml</code>, which will be populated by siteymlgen according to your file names and input options supplied to <code><a href="reference/init.html">init()</a></code>. ?pkgdown::build_site() Set up build tools so that you can build an R markdown website and then “Build Website”:</p>
@@ -133,7 +132,7 @@
 
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
     <div class="links">
-<h2>Links</h2>
+<h2 data-toc-skip>Links</h2>
 <ul class="list-unstyled">
 <li>Download from CRAN at <br><a href="https://cloud.r-project.org/package=siteymlgen">https://​cloud.r-project.org/​package=siteymlgen</a>
 </li>
@@ -141,37 +140,43 @@
 </li>
 </ul>
 </div>
+
 <div class="license">
-<h2>License</h2>
+<h2 data-toc-skip>License</h2>
 <ul class="list-unstyled">
 <li><a href="LICENSE.html">Full license</a></li>
 <li><small><a href="https://opensource.org/licenses/mit-license.php">MIT</a> + file <a href="LICENSE-text.html">LICENSE</a></small></li>
 </ul>
 </div>
+
+
 <div class="developers">
-<h2>Developers</h2>
+<h2 data-toc-skip>Developers</h2>
 <ul class="list-unstyled">
 <li>Adam Cribbs <br><small class="roles"> Author, maintainer </small> <a href="https://orcid.org/0000-0001-5288-3077" target="orcid.widget" aria-label="ORCID"><span class="fab fa-orcid orcid" aria-hidden="true"></span></a> </li>
 </ul>
 </div>
 
-  <div class="dev-status">
-<h2>Dev status</h2>
+<div class="dev-status">
+<h2 data-toc-skip>Dev status</h2>
 <ul class="list-unstyled">
-<li><a href="https://github.com/Acribbs/siteymlgen/actions"><img src="https://github.com/Acribbs/siteymlgen/workflows/R-CMD-check/badge.svg" alt="R build status"></a></li>
-<li><a href="https://codecov.io/gh/Acribbs/siteymlgen?branch=master"><img src="https://codecov.io/gh/Acribbs/siteymlgen/branch/master/graph/badge.svg" alt="Codecov test coverage"></a></li>
+<li><a href="https://github.com/Acribbs/siteymlgen/actions" class="external-link"><img src="https://github.com/Acribbs/siteymlgen/workflows/R-CMD-check/badge.svg" alt="R build status"></a></li>
+<li><a href="https://codecov.io/gh/Acribbs/siteymlgen?branch=master" class="external-link"><img src="https://codecov.io/gh/Acribbs/siteymlgen/branch/master/graph/badge.svg" alt="Codecov test coverage"></a></li>
 </ul>
 </div>
-</div>
+
+  </div>
 </div>
 
 
       <footer><div class="copyright">
-  <p>Developed by Adam Cribbs.</p>
+  <p></p>
+<p>Developed by Adam Cribbs.</p>
 </div>
 
 <div class="pkgdown">
-  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.5.1.9000.</p>
+  <p></p>
+<p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 1.6.1.9001.</p>
 </div>
 
       </footer>
@@ -179,6 +184,8 @@
 
   
 
+
+  
 
   </body>
 </html>
